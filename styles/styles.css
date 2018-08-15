@@ -1,0 +1,168 @@
+/* NAVBAR */
+#navbar {
+    margin: 0  5%;
+    border-bottom: 2px solid black;
+}
+
+#navbar #navbar-name {
+    font-weight: bold;
+}
+
+#navbar .navbar-left-item {
+    float: left;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#navbar .navbar-right-item {
+    float: right;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#navbar a, .compact-navbar-item a {
+    font-family: 'Montserrat', sans-serif;
+    padding: 14px 16px;
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    text-decoration: none;
+}
+
+#navbar a:visited, .compact-navbar-item a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+#navbar a:hover, .compact-navbar-item a:hover {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#navbar #navbar-menu-icon {
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #navbar a:not(#navbar-name):not(#navbar-menu-icon) {
+        display: none;
+    }
+
+    #navbar #navbar-menu-icon {
+        display: block;
+    }
+
+    #navbar a:hover, .compact-navbar-item a:hover {
+        text-decoration: none;
+    }
+}
+
+#compact-navbar {
+    overflow: hidden;
+    margin: 0 5%;
+    border-bottom: 2px solid lightgray;
+    text-align: center;
+    display: none;
+    animation-name: compact-navbar-down;
+    animation-duration: 500ms;
+}
+
+@keyframes compact-navbar-down {
+    from {height: 0;}
+    to {height: 46px;}
+}
+
+@media only screen and (min-width: 600px) {
+    #compact-navbar {
+        display: none !important;
+    }
+}
+
+/* SECTIONS */
+
+.section {
+    margin: 0 10%;
+    padding-top: 2%;
+    overflow: hidden;
+}
+
+.section-header {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.section-text {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ME */
+
+#aboutme #me-img {
+    width: 50%;
+    height: auto;
+    float: left;
+    padding-right: 5%;
+}
+
+@media only screen and (max-width: 800px) {
+    #aboutme #me-img {
+        width: 100%;
+        height: auto;
+        float: none;
+        padding: 0;
+    }
+}
+
+/* CONTACT */
+.contact-item {
+    display: inline;
+    padding: 0 5px;
+}
+
+.contact-text {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-decoration: inherit;
+}
+
+.contact-link {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-link:visited {
+    color: black;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: black;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* FOOTER */
+.footer {
+    overflow: hidden;
+    margin: 15% 5% 0 5%;
+    border-top:  2px solid lightgray;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+/* MISC */
+.pull-right {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+/* CLEARING FLOATS */
+
+#navbar:after, #compact-navbar:after {
+    content: "";
+    display: table;
+    clear: both;
+}
