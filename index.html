@@ -1,20 +1,26 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/image-picker.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="scripts/jquery-3.3.1.min.js"></script>
+    <script src="scripts/image-picker.min.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
 
     <title>Jeremy Ong</title>
   </head>
   <body>
+    <!-- Scroll Up Button -->
+    <img src="images/up.svg" id="up">
+
+    <!-- Navigation Bar -->
     <div id="navbar">
       <a class="navbar-left-item" id="navbar-name" href="#aboutme">Jeremy Ong</a>
       <a class="navbar-left-item" href="#projects">projects</a>
@@ -34,42 +40,189 @@
       </div>
     </div>
 
-    <div class="section" id="aboutme">
-      <h1 class="section-header">ME</h1>
-      <img src="images/me.jpeg" id="me-img"/>
-      <p class="section-text">
-        I was born and raised in Olympia, Washington with my mom, dad, and two younger brothers.
-        From a young age, I've found joy in solving puzzles, and this has led me to explore the
-        field of Computer Science. It's my dream to have positive influence across th globe, and
-        I believe software is the appropriate medium for me to accomplish this. I've become
-        enamored with the seemingly endless applications of machine learning and have thus chosen
-        machine learning as my area of specialization.
-      </p>
-      <p class="section-text">
-        Outside of computer stuff, I enjoy spending time with friends, climbing rocks, and playing
-        spikeball. I am learning to play the the ukelele and satiating my curiosity with books and
-        articles.
-      </p>
-    </div>
+    <!-- Sections -->
+    <div id="sections">
 
-    <div class="section" id="projects">
-      <h1 class="section-header">PROJECTS</h1>
+      <!-- About Me -->
+      <div class="section" id="aboutme">
+        <h1 class="section-header">ME</h1>
+        <img src="images/me.jpeg" alt="Me" id="me-img"/>
+        <p class="section-text">
+          I was born and raised in Olympia, Washington with my mom, dad, and two younger brothers.
+          From a young age, I've found joy in solving puzzles, and this has led me to explore the
+          field of Computer Science. It's my dream to have positive influence across the globe, and
+          I believe software is the appropriate medium for me to accomplish this. I've become
+          enamored with the seemingly endless applications of machine learning and have thus chosen
+          machine learning as my area of specialization.
+        </p>
+        <p class="section-text">
+          Outside of computer stuff, I enjoy spending time with friends, climbing rocks, and playing
+          spikeball. I am learning to play the the ukelele and satiating my curiosity with books and
+          articles.
+        </p>
+      </div>
 
-    </div>
+      <!-- Projects -->
+      <div class="section" id="projects">
+        <h1 class="section-header">PROJECTS</h1>
+        <select id="projects-picker">
+          <option data-img-src="images/ramen.png" data-img-class="projects-pick" data-img-alt="Bob's Ramen" value="ramen">
+            Bob's Ramen
+          </option>
+          <option data-img-src="images/resistar.png" data-img-class="projects-pick" data-img-alt="ResistAR" value="resistar">
+            ResistAR
+          </option>
+          <option data-img-src="images/inventex.jpg" data-img-class="projects-pick" data-img-alt="Inventex" value="inventex">
+            Inventex
+          </option>
+          <option data-img-src="images/discourse.jpg" data-img-class="projects-pick" data-img-alt="Facebook Discourse" value="discourse">
+            Facebook Discourse
+          </option>
+          <option data-img-src="images/modware.jpg" data-img-class="projects-pick" data-img-alt="Modware" value="modware">
+            Modware
+          </option>
+        </select>
+        <div id="projects-body">
+          <!-- Bob's Ramen -->
+          <div class="project-item project-active" id="ramen">
+            <div class="project-image-container">
+              <img class="project-image" alt="Bob's Ramen" src="images/ramen.png"/>
+              <p class="project-image-date">September 2016</p>
+            </div>
+            <p class="project-description">
+              This was the beginning of my hackathon career.
+              The idea for a robotic ramen machine actually came about before I came to college.
+              Over the summer, I was direct messaging my future roommate, and we were fantasizing
+              how great an automatic ramen machine would be. Ramen is the quintessential college 
+              meal, and since we all know we're too busy studying, a ramen robot seems necessary
+              for a college student's life. A few weeks into college, we heard about CMU's
+              beginner's hackathon HackCMU. This would be the perfect opportunity to build this!
+              We bought wood, scrapped together cardboard and duct tape, and found an arduino, and
+              the rest is history. We successfully created a robotic inernet of things ramen
+              preparer controlled by an iPhone app. Bob's Ramen won the Mentor's Choice Award
+              sponsored by Microsoft. 
+              <br/>
+              <a class="pull-right" target="_blank" href="https://devpost.com/software/bob-s-ramen">
+                Check it out
+              </a>
+            </p>
+          </div>
 
-    <div class="footer"id=contact>
-      <a href="https://linkedin.com/in/jearmoo" target="_blank">
-        <img class="contact-item pull-right" src="images/linkedin.png" height=25 width=25/>
-      </a>
-      <a href="https://facebook.com/tjong1998" target="_blank">
-        <img class="contact-item pull-right" src="images/facebook.png" height=25 width=25/>
-      </a>
-      <a class="contact-link" href="tel:360-890-7776">
-        <div class="contact-item contact-text pull-right">(360) 890-7776</div>
-      </a>
-      <a class="contact-link" href="mailto:tto@andrew.cmu.edu">
-        <div class="contact-item contact-text pull-right">tto@andrew.cmu.edu</div>
-      </a>
+          <!-- ResistAR -->
+          <div class="project-item" id="resistar">
+            <div class="project-image-container">
+              <img class="project-image" alt="ResistAR" src="images/resistar.png"/>
+              <p class="project-image-date">February 2017</p>
+            </div>
+            <p class="project-description">
+              When you're at a hackathon with 3 other ECE (electrical and computer engineering)
+              majors you shouldn't be surprised if your project is about resistors. Our idea was
+              to design 3D printed parts representing circuit components (source, ground, resistor),
+              and then make an app that would visualize the circuit flow through a given circuit
+              configuration. None of us had experience with augmented reality, but we decided to
+              go for the challenge. The project would also have educational applications. We
+              happened upon the Vuforia SDK which could be coupled with Unity to make augmented
+              reality apps using QR codes as targets. I primarily worked on the algorithms which
+              outputted the electron flow direction and locations as well as the solved resistor
+              potential differences and current flow. We made ResistAR at TartanHacks, Carnegie
+              Mellon's premiere hackathon and won the grand prize.
+              <br/>
+              <a class="pull-right" target="_blank" href="https://devpost.com/software/resistar">
+                Check it out
+              </a>
+            </p>
+          </div>
+
+          <!-- Inventex -->
+          <div class="project-item" id="inventex">
+            <div class="project-image-container">
+              <img class="project-image" alt="Inventex" src="images/inventex.jpg"/>
+              <p class="project-image-date">September 2017</p>
+            </div>
+            <p class="project-description">
+              Inventex is an internet-enabled hardware sorter and inventory maintenance machine.
+              It works with a mobile app built in React Native. I was in charge of making the 
+              mobile app and configuring the raspberry pi to take incoming commands. The problem
+              it was aimed towards was messy workspaces. With Inventex, you can scan the piece of
+              hardware that you want to desposit with the app, then put it in the machine's input
+              slot. The machine then allocates a bin for that category of hardware and deposits
+              the hardware in it. When you want to retrieve something, you can select the
+              hardware type and amount from the app interface and the machine will spit it out for
+              you. We made Inventex at PennApps, and we won the best hardware hack award.
+              <br/>
+              <a class="pull-right" target="_blank" href="https://devpost.com/software/toolhub">
+                Check it out
+              </a>
+            </p>
+          </div>
+
+          <!-- Facebook Discourse -->
+          <div class="project-item" id="discourse">
+            <div class="project-image-container">
+              <img class="project-image" alt="Facebook Discourse" src="images/discourse.jpg"/>
+              <p class="project-image-date">November 2017</p>
+            </div>
+            <p class="project-description">
+              At the Facebook Global Hackathon, my team and I created something called Facebook
+              Discourse. A bit of background about the Facebook Global Hackathon: every year
+              Facebook invites the winners of a handful of hackathons from across the globe.
+              When I participated, there were 20 teams from 11 different countries. I qualified
+              because my team won the grand prize at TartanHacks. Some other hackathons from the
+              US that are represented are PennApps, HackMIT, and TreeHacks (Stanford). Facebook
+              Discourse is a debate platform that fosters positive discourse by only allowing
+              positive interactions from spectators like upvoting points made and also adding
+              credible sources. Additionally, users can follow debate threads that are
+              automatically detected by the system. This could be used with presidential debates
+              by visualizing the arguments on our platform. We presented Facebook Discourse to
+              the VPs of technology of OculusVR, WhatsApp, and Instagram and won first prize.
+            </p>
+          </div>
+
+          <!-- Modware -->
+          <div class="project-item" id="modware">
+            <div class="project-image-container">
+              <img class="project-image" alt="Modware" src="images/modware.jpg"/>
+              <p class="project-image-date">January 2018</p>
+            </div>
+            <p class="project-description">
+              At PennApps, my team and I made Modware, a Modular Hardware Prototyping kit for the
+              Software Engineer to take the "hard" out of hardware. Modware is a magnetic board
+              with magnetically attachable hardware components such as light switches, knobs, and
+              lights. The idea is that with Modware, the user would be able to easily hook up
+              hardware components to anything they might need without having to know the details
+              of electrical engineering. Modware also includes a UI to connect
+              the components to each other and configure apis with the hardware components.
+              One of the examples we set up was using a knob to control the depth of a Sierpinski's
+              triangle rendering. A software engineer could also make a light flash to alert
+              them of something like a stock hitting a certain price. I personally worked on the
+              backend design including data structures and data passing. Modware earned us four
+              awards: the PennApps 2nd place prize, Lutron's IOT award, best Hardware Hack, and
+              Hacker's favorite award.
+              <br/>
+              <a class="pull-right" target="_blank" href="https://devpost.com/software/modware">
+                Check it out
+              </a>
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="footer" id=contact>
+        <a href="https://linkedin.com/in/jearmoo" target="_blank">
+          <img class="contact-item contact-item-image pull-right" alt="LinkedIn" src="images/linkedin.png" height=25 width=25/>
+        </a>
+        <a href="https://facebook.com/tjong1998" target="_blank">
+          <img class="contact-item contact-item-image pull-right" alt="Facebook" src="images/facebook.png" height=25 width=25/>
+        </a>
+        <a class="contact-link" href="tel:360-890-7776">
+          <div class="contact-item contact-text pull-right">(360) 890-7776</div>
+        </a>
+        <a class="contact-link" href="mailto:tto@andrew.cmu.edu">
+          <div class="contact-item contact-text pull-right">tto@andrew.cmu.edu</div>
+        </a>
+      </div>
     </div>
   </body>
 </html>
