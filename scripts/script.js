@@ -1,3 +1,6 @@
+const SCROLL_BUTTON_THRESHOLD = 100;
+const SCROLL_TIME_MS = 1500
+
 $(document).ready(function(){
 
     /* SCROLL UP BUTTON */
@@ -6,7 +9,7 @@ $(document).ready(function(){
         const up = $("#up");
         const scrollTop = $(window).scrollTop();
         const scrollBottom = $(document).height() - $(window).height() - scrollTop;
-        if (scrollTop > 50 && scrollBottom > 50) {
+        if (scrollTop > SCROLL_BUTTON_THRESHOLD && scrollBottom > SCROLL_BUTTON_THRESHOLD) {
             up.fadeIn();
         } else {
             up.fadeOut();
@@ -15,7 +18,7 @@ $(document).ready(function(){
     $("#up").click(function(){
         $('html, body').animate({
             scrollTop: 0
-        }, 1500, 'easeOutCubic');
+        }, SCROLL_TIME_MS, 'easeOutCubic');
     })
 
     /* RESPONSIVE NAVBAR MENU ICON */
@@ -37,7 +40,7 @@ $(document).ready(function(){
 
         $('html, body').animate({
             scrollTop: top
-        }, 1500, 'easeOutCubic');
+        }, SCROLL_TIME_MS, 'easeOutCubic');
     });
 
     /* PROJECTS PICKER */
