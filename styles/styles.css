@@ -205,6 +205,10 @@ body {
 
 /* EXPERIENCE */
 
+#experience {
+    overflow: visible;
+}
+
 #experience-timeline {
     position: relative;
     margin: 1px 100px;
@@ -212,6 +216,15 @@ body {
 
 #experience-timeline ul {
     list-style: none;
+    width: 80%;
+}
+
+#experience-timeline ul:before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    border-left: 2px dashed black;
 }
 
 .experience-name {
@@ -225,14 +238,6 @@ body {
 
 .experience-description br {
     line-height: 150%;
-}
-
-#experience-timeline ul:before {
-    content: '';
-    width: 2px;
-    height: 100%;
-    position: absolute;
-    border-left: 2px dashed black;
 }
 
 #experience-timeline ul li {
@@ -305,7 +310,6 @@ body {
     }
     #experience-timeline ul li {
         margin-left: 15px;
-        max-width: 80%;
     }
 
     #experience-timeline ul li span.experience-times {
