@@ -2,30 +2,29 @@ $(document).ready(function(){
 
     /* SCROLL UP BUTTON */
     $(window).scroll(function(){
-        $("#compact-navbar").hide();
+        $("#compact-navbar").slideUp();
         const up = $("#up");
         const scrollTop = $(window).scrollTop();
         const scrollBottom = $(document).height() - $(window).height() - scrollTop;
         if (scrollTop > 50 && scrollBottom > 50) {
-            up.show();
+            up.fadeIn();
         } else {
-            up.hide();
+            up.fadeOut();
         }
     })
     $("#up").click(function(){
         $('html, body').animate({
             scrollTop: 0
-        }, 500, 'swing');
+        }, 1500, 'easeOutCubic');
     })
 
     /* RESPONSIVE NAVBAR MENU ICON */
     $("#navbar-menu-icon").click(function(){
         const cn = $("#compact-navbar");
         if (cn.is(":visible")) {
-            cn.hide();
+            cn.slideUp();
         } else {
-            cn.show();
-            cn.delay(10000).hide(1);
+            cn.slideDown();
         }
     })
 
@@ -38,7 +37,7 @@ $(document).ready(function(){
     
         $('html, body').animate({
             scrollTop: top
-        }, 500, 'swing');
+        }, 1500, 'easeOutCubic');
     });
 
     /* PROJECTS PICKER */
@@ -50,4 +49,13 @@ $(document).ready(function(){
             $("#" + selectedValue).addClass(activeClass);
         }
     });
+
+    /* EGG */
+    var egg = new Egg();
+    egg.addCode("up,up,down,down,left,right,left,right,b,a", function() {
+        jQuery('#egg').fadeIn(null, function() {
+            $(this).delay(5000).fadeOut();
+          }).css('display', 'flex');
+    });
+    egg.listen();
  });

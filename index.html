@@ -6,37 +6,44 @@
 
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
     <link rel="stylesheet" href="styles/image-picker.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <script src="scripts/jquery-3.3.1.min.js"></script>
-    <script src="scripts/image-picker.min.js"></script>
+    <script type="text/javascript" src="scripts/egg.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="scripts/jquery.easing.1.3.min.js"></script>
+    <script type="text/javascript" src="scripts/image-picker.min.js"></script>
     <script type="text/javascript" src="scripts/script.js"></script>
 
     <title>Jeremy Ong</title>
   </head>
   <body>
     <!-- Scroll Up Button -->
-    <img src="images/up.svg" id="up">
+    <img src="images/up.svg" alt="Up" id="up">
 
     <!-- Navigation Bar -->
     <div id="navbar">
-      <a class="navbar-left-item" id="navbar-name" href="#aboutme">Jeremy Ong</a>
-      <a class="navbar-left-item" href="#projects">projects</a>
-      <a class="navbar-left-item" href="#contact">contact</a>
-      <a class="navbar-right-item" id="navbar-menu-icon">&#9776;</a>
-      <a target="_blank" class="navbar-right-item" id="resume" href="resume.pdf">resume</a>
+      <a class="navbar-left-item underline-link" id="navbar-name" href="#aboutme">Jeremy Ong</a>
+      <a class="navbar-left-item underline-link" href="#projects">projects</a>
+      <a class="navbar-left-item underline-link" href="#experience">experience</a>
+      <a class="navbar-left-item underline-link" href="#contact">contact</a>
+      <a class="navbar-right-item underline-link" id="navbar-menu-icon">&#9776;</a>
+      <a class="navbar-right-item underline-link" id="resume" href="resume.pdf">resume</a>
     </div>
-    <div class="compact-navbar-close" id="compact-navbar">
+    <div id="compact-navbar">
       <div class="compact-navbar-item">
-        <a href="#projects">projects</a>
+        <a class="underline-link" href="#projects">projects</a>
       </div>
       <div class="compact-navbar-item">
-        <a href="#contact">contact</a>
+        <a class="underline-link" href="#experience">experience</a>
       </div>
       <div class="compact-navbar-item">
-        <a id="compact-resume" href="resume.pdf">resume</a>
+        <a class="underline-link" href="#contact">contact</a>
+      </div>
+      <div class="compact-navbar-item">
+        <a class="underline-link" id="compact-resume" href="resume.pdf">resume</a>
       </div>
     </div>
 
@@ -48,17 +55,18 @@
         <h1 class="section-header">ME</h1>
         <img src="images/me.jpeg" alt="Me" id="me-img"/>
         <p class="section-text">
-          I was born and raised in Olympia, Washington with my mom, dad, and two younger brothers.
+          I was born and raised in Olympia, Washington, with my mom, dad, and two younger brothers.
           From a young age, I've found joy in solving puzzles, and this has led me to explore the
           field of Computer Science. It's my dream to have positive influence across the globe, and
           I believe software is the appropriate medium for me to accomplish this. I've become
           enamored with the seemingly endless applications of machine learning and have thus chosen
           machine learning as my area of specialization.
-        </p>
-        <p class="section-text">
+          <br/><br/>
           Outside of computer stuff, I enjoy spending time with friends, climbing rocks, and playing
           spikeball. I am learning to play the the ukelele and satiating my curiosity with books and
           articles.
+          <br/><br/>
+          Currently I'm pursuing a B.S. in Computer Science at Carnegie Mellon as a Junior.
         </p>
       </div>
 
@@ -102,7 +110,7 @@
               preparer controlled by an iPhone app. Bob's Ramen won the Mentor's Choice Award
               sponsored by Microsoft. 
               <br/>
-              <a class="pull-right" target="_blank" href="https://devpost.com/software/bob-s-ramen">
+              <a class="pull-right" href="https://devpost.com/software/bob-s-ramen">
                 Check it out
               </a>
             </p>
@@ -127,7 +135,7 @@
               potential differences and current flow. We made ResistAR at TartanHacks, Carnegie
               Mellon's premiere hackathon and won the grand prize.
               <br/>
-              <a class="pull-right" target="_blank" href="https://devpost.com/software/resistar">
+              <a class="pull-right" href="https://devpost.com/software/resistar">
                 Check it out
               </a>
             </p>
@@ -150,7 +158,7 @@
               hardware type and amount from the app interface and the machine will spit it out for
               you. We made Inventex at PennApps, and we won the best hardware hack award.
               <br/>
-              <a class="pull-right" target="_blank" href="https://devpost.com/software/toolhub">
+              <a class="pull-right" href="https://devpost.com/software/toolhub">
                 Check it out
               </a>
             </p>
@@ -199,7 +207,7 @@
               awards: the PennApps 2nd place prize, Lutron's IOT award, best Hardware Hack, and
               Hacker's favorite award.
               <br/>
-              <a class="pull-right" target="_blank" href="https://devpost.com/software/modware">
+              <a class="pull-right" href="https://devpost.com/software/modware">
                 Check it out
               </a>
             </p>
@@ -208,21 +216,122 @@
         </div>
       </div>
 
+      <!-- Experience -->
+      <div class="section" id="experience">
+        <h1 class="section-header">EXPERIENCE</h1>
+        <div id="experience-timeline">
+          <ul>
+            <li>
+              <h3 class="experience-name">
+                TA for <a class="cmu-font underline-link" href="http://www.cs.cmu.edu/~mgormley/courses/10601-s18/index.html">10-601 Intro to ML </a>
+              </h3>
+              <p class="experience-description">
+                This is Carnegie Mellon's introductory machine learning course targeted at
+                Master's students. It covers all or most of: concept learning, decision trees,
+                neural networks, linear learning, active learning, estimation & the bias-variance
+                tradeoff, hypothesis testing, Bayesian learning, the MDL principle,
+                the Gibbs classifier, Naive Bayes, Bayes Nets & Graphical Models, the EM algorithm,
+                Hidden Markov Models, K-Nearest-Neighbors and nonparametric learning, reinforcement
+                learning, bagging, boosting and discriminative training. My responsibilities will
+                include leading recitations and designing assignments and tests.
+              </p>
+              <span class="experience-times">
+                <span>Aug.<br>2018</span>
+                <span>Dec.<br>2018</span>
+              </span>
+            </li>
+            <li>
+              <h3 class="experience-name">
+                Intern at <a class="aurora-font underline-link" href="https://aurora.tech">AURORA</a>
+              </h3>
+              <div class="experience-description">
+                <p>
+                Over the summer I had the incredible opportunity to intern at this world-class self
+                driving car company. While there, I built the core communication system between the
+                self driving cars and the fleet monitoring dashboard. I worked with Qt, nginx,
+                Flask, React, and Redux. My software was promptly adopted into the Vehicle
+                Operations team's daily workflow. (The Vehicle Operations team is in charge of
+                carrying out tests on the vehicles).
+                </p>
+                <p>
+                During my internship, I also added hyperparameter tuning capabilities to the
+                perception training script and created a tool to plot the geographical locations
+                of perception training data along with their properties. For these projects I used
+                Tensorflow, Python, and C++.
+                </p>
+              </div>
+              <span class="experience-times">
+                <span>Jun.<br>2018</span>
+                <span>Aug.<br>2018</span>
+              </span>
+            </li>
+            <li>
+              <h3 class="experience-name">
+                TA for <a class="cmu-font underline-link" href="https://www.cs.cmu.edu/~15110/">15-110 Principles of Computing </a>
+              </h3>
+              <p class="experience-description">
+                This is a course in fundamental computing principles for students with minimal
+                or no computing background. It teaches programming constructs and also covers
+                history and applications of computing. My responsibilities included leading
+                recitation, conducting office hours, grading assignments/tests, and discussing
+                how to improve the course. I spent around 8-10 hours a week on this.
+              </p>
+              <span class="experience-times">
+                <span>Aug.<br>2017</span>
+                <span>Dec.<br>2017</span>
+              </span>
+            </li>
+            <li>
+              <h3 class="experience-name">
+                Research Assistant for <a class="genamap-font underline-link" href=http://genamap.org>GenAMap</a>
+              </h3>
+              <p class="experience-description">
+                I worked on this research project at the Carnegie Mellon Center for Machine
+                Learning and Health. The project is a platform for genome-wide association
+                studies. I primarily designed and implemented systems for transferring data
+                between the backend and frontend. I used MongoDB, Node.js, Node.js C++
+                Addons, React, and Redux.
+              </p>
+              <span class="experience-times">
+                <span>Jun.<br>2017</span>
+                <span>Aug.<br>2017</span>
+              </span>
+            </li>
+            <li>
+              <h3 class="experience-name">
+                TA for <a class="cmu-font underline-link" href="https://www.cs.cmu.edu/~15110/">15-110 Principles of Computing </a>
+              </h3>
+              <p class="experience-description">See description above.</p>
+              <span class="experience-times">
+                <span>Jan.<br>2017</span>
+                <span>May.<br>2017</span>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <!-- Contact -->
       <div class="footer" id=contact>
-        <a href="https://linkedin.com/in/jearmoo" target="_blank">
+        <a href="https://linkedin.com/in/jearmoo">
           <img class="contact-item contact-item-image pull-right" alt="LinkedIn" src="images/linkedin.png" height=25 width=25/>
         </a>
-        <a href="https://facebook.com/tjong1998" target="_blank">
+        <a href="https://facebook.com/tjong1998">
           <img class="contact-item contact-item-image pull-right" alt="Facebook" src="images/facebook.png" height=25 width=25/>
         </a>
-        <a class="contact-link" href="tel:360-890-7776">
+        <a class="contact-link underline-link" href="tel:360-890-7776">
           <div class="contact-item contact-text pull-right">(360) 890-7776</div>
         </a>
-        <a class="contact-link" href="mailto:tto@andrew.cmu.edu">
+        <a class="contact-link underline-link" href="mailto:tto@andrew.cmu.edu">
           <div class="contact-item contact-text pull-right">tto@andrew.cmu.edu</div>
         </a>
       </div>
+    </div>
+
+    <!-- Egg -->
+    <div id="egg">
+      <h1>You Found Me!</h1>
+      <img src="images/fox.gif" alt="Fox Says Hi" id="fox">
     </div>
   </body>
 </html>

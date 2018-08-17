@@ -1,16 +1,18 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
 }
 
 @media only screen and (max-width: 600px) {
     p {
         font-size: .8em;
     }
-}
 
-@media only screen and (max-width: 600px) {
     h1 {
         font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1em;
     }
 }
 
@@ -21,18 +23,13 @@ body {
     width: 30px;
     bottom: 50px;
     right: calc(5% + 10px);
-    z-index: 99;
+    z-index: 98;
     animation-name: up-fade-in;
     animation-duration: 500ms;
 }
 
 #up:hover {
     cursor: pointer;
-}
-
-@keyframes up-fade-in {
-    from {opacity: 0;}
-    to {opacity: .8;}
 }
 
 /* NAVBAR */
@@ -64,7 +61,6 @@ body {
 #navbar a, .compact-navbar-item a {
     text-align: center;
     color: black;
-    text-decoration: none;
 }
 
 .compact-navbar-item a {
@@ -76,32 +72,17 @@ body {
     padding: 14px 16px;
 }
 
-#navbar a:visited, .compact-navbar-item a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-#navbar a:hover, .compact-navbar-item a:hover {
-    color: black;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 #navbar #navbar-menu-icon {
     display: none;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     #navbar a:not(#navbar-name):not(#navbar-menu-icon) {
         display: none;
     }
 
     #navbar #navbar-menu-icon {
         display: block;
-    }
-
-    #navbar a:hover, .compact-navbar-item a:hover {
-        text-decoration: none;
     }
 }
 
@@ -111,17 +92,10 @@ body {
     border-bottom: 2px solid lightgray;
     text-align: center;
     display: none;
-    animation-name: compact-navbar-down;
-    animation-duration: 1s;
     background: white;
 }
 
-@keyframes compact-navbar-down {
-    from {max-height: 0;}
-    to {max-height: 100px;}
-}
-
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
     #compact-navbar {
         display: none !important;
     }
@@ -167,7 +141,7 @@ body {
 .project-item {
     display: none;
     animation-name: fade-in;
-    animation-duration: 2s;
+    animation-duration: 1s;
 }
 
 @keyframes fade-in {
@@ -221,11 +195,124 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-.projects-pick {
-    width: 30px;
-    height: auto;
+    .projects-pick {
+        width: 30px;
+        height: auto;
+    }
 }
+
+/* EXPERIENCE */
+#experience-timeline {
+    position: relative;
+    margin: 1px 100px;
 }
+
+#experience-timeline ul {
+    list-style: none;
+}
+
+.experience-name {
+    margin: .5em;
+}
+
+.experience-description {
+    margin: .5em;
+    text-align: left;
+}
+
+.experience-description br {
+    line-height: 150%;
+}
+
+#experience-timeline ul:before {
+    content: '';
+    width: 2px;
+    height: 100%;
+    position: absolute;
+    border-left: 2px dashed black;
+}
+
+#experience-timeline ul li {
+    margin-left: 30px;
+    padding: 8px;
+    border: 2px solid black;
+    position: relative;
+}
+
+#experience-timeline ul li:not(:first-child) {
+    margin-top: 40px;
+}
+
+#experience-timeline ul li span.experience-times {
+    width: 2px;
+    height: 100%;
+    background: black;
+    position: absolute;
+    left: -32px;
+    top: 0;
+    position: absolute;
+}
+
+
+#experience-timeline ul li span.experience-times:before, #experience-timeline ul li span.experience-times:after {
+    position:absolute;
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background-color: white;
+    left: -5px;
+}
+
+#experience-timeline ul li span.experience-times:before {
+    top: -2px;
+}
+
+#experience-timeline ul li span.experience-times:after {
+    top: calc(100% - 10px);
+}
+
+.experience-times span {
+    position: absolute;
+    left: -110px;
+    font-size: .8em;
+    width: 100px;
+    text-align: right;
+}
+
+.experience-times span:last-child {
+    top: -10px;
+}
+
+.experience-times span:first-child {
+    top: calc(100% - 15px);
+}
+
+@media only screen and (max-width: 800px) {
+    #experience-timeline {
+        margin: 1px 50px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #experience-timeline {
+        margin: 1px 1px;
+    }
+    #experience-timeline ul li {
+        margin-left: 15px;
+        max-width: 80%;
+    }
+
+    #experience-timeline ul li span.experience-times {
+        left: -17px;
+    }
+
+    .experience-times span {
+        font-size: .5em;
+    }
+}
+
 
 /* CONTACT */
 .contact-item {
@@ -234,7 +321,15 @@ body {
 }
 
 .contact-item-image {
+    position: relative;
     border-radius: 5px;
+}
+
+.contact-item-image:hover {
+    left: 2.5px;
+    bottom: 2.5px;
+    width: 30px;
+    height: auto;
 }
 
 .contact-text {
@@ -244,18 +339,6 @@ body {
 
 .contact-link {
     color: black;
-    text-decoration: none;
-}
-
-.contact-link:visited {
-    color: black;
-    text-decoration: none;
-}
-
-.contact-link:hover {
-    color: black;
-    text-decoration: underline;
-    cursor: pointer;
 }
 
 /* FOOTER */
@@ -268,7 +351,7 @@ body {
 }
 
 /* MISC */
-.pull-right {
+.pull-left {
     float: left;
 }
 
@@ -277,7 +360,64 @@ body {
 }
 
 .default-font {
-    font-family: 'Montserrat', sans-serif;
+    font-family: Montserrat, sans-serif;
+}
+
+.aurora-font {
+    font-family: Questrial, sans-serif;
+    font-weight: bold;
+    color: #0078FF;
+    letter-spacing: 2px;
+}
+
+.cmu-font {
+    color: black;
+    font-weight: bold;
+}
+
+.genamap-font {
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,cursive;;
+    color: #00B8E6;
+    font-weight: bold;
+}
+
+.underline-link {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.underline-link:hover {
+    text-decoration: underline;
+}
+
+#egg {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    background-color: rgba(206,103,0,.5);
+    padding: 20%px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    display: none;
+    color: white;
+}
+
+#fox {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    border: 5px solid #CE6700;
+}
+
+@media only screen and (max-width: 800px) {
+    .underline-link:hover {
+        text-decoration: none;
+    }
 }
 
 /* CLEARING FLOATS */
