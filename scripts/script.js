@@ -34,7 +34,7 @@ $(document).ready(function(){
 
         const top = $(document).height() -
             (Math.max($(document).height() - $($(this).attr('href')).offset().top, $(window).height()));
-    
+
         $('html, body').animate({
             scrollTop: top
         }, 1500, 'easeOutCubic');
@@ -46,16 +46,44 @@ $(document).ready(function(){
             const selectedValue = newValues[0];
             const activeClass = "project-active";
             $("." + activeClass).removeClass(activeClass);
-            $("#" + selectedValue).addClass(activeClass);
+            $("#" + selectedValue).css({
+                "animation-name": "fade-in",
+                "animation-duration": "1s"
+            }).addClass(activeClass);
         }
     });
 
-    /* EGG */
-    var egg = new Egg();
-    egg.addCode("up,up,down,down,left,right,left,right,b,a", function() {
-        jQuery('#egg').fadeIn(null, function() {
-            $(this).delay(5000).fadeOut();
-          }).css('display', 'flex');
+    /* FOX HUNT */
+    $("#fox-start").one('click', function(){
+        $("#fox-start-speak").slideDown(null, function() {
+            $(this).delay(9000).fadeOut();
+            $("#fox-start").delay(10000).fadeOut();
+            $("#fox-next").delay(11000).fadeIn();
+        });
+
+        $("#fox-next").one('click', function(){
+            $("#fox-next-speak").slideDown(null, function() {
+                $(this).delay(9000).fadeOut();
+                $("#fox-next").delay(10000).fadeOut();
+                $("#fox-next-next").delay(11000).fadeIn();
+            });
+
+
+            $("#fox-next-next").one('click', function(){
+                $("#fox-next-next-speak").slideDown(null, function() {
+                    $(this).delay(9000).fadeOut();
+                    $("#fox-next-next").delay(10000).fadeOut();
+                    setTimeout(function(){
+                        var egg = new Egg();
+                        egg.addCode("up,up,down,down,left,right,left,right,b,a", function() {
+                            $('#fox-hard-container').fadeIn(null, function() {
+                                $(this).delay(5000).fadeOut();
+                            }).css('display', 'flex');
+                        });
+                        egg.listen();
+                    }, 11000)
+                });
+            });
+        });
     });
-    egg.listen();
  });
