@@ -2,20 +2,6 @@ body {
     font-family: Montserrat, sans-serif;
 }
 
-@media only screen and (max-width: 600px) {
-    p {
-        font-size: .875em;
-    }
-
-    h1 {
-        font-size: 1.5em;
-    }
-
-    h3 {
-        font-size: 1em;
-    }
-}
-
 /* (scroll) UP */
 
 #up {
@@ -103,8 +89,7 @@ body {
 /* SECTIONS */
 
 .section {
-    margin: 2% 10% 2% 10%;
-    overflow: hidden;
+    margin: 3% 5%;
     position: relative;
 }
 
@@ -117,7 +102,6 @@ body {
 #aboutme #me-img {
     width: 50%;
     height: auto;
-    float: left;
     margin-right: 5%;
 }
 
@@ -131,10 +115,6 @@ body {
 }
 
 /* PROJECTS */
-
-#projects {
-    overflow: visible;
-}
 
 #projects-body .project-item {
     display: none;
@@ -170,24 +150,19 @@ body {
 
 /* EXPERIENCE */
 
-#experience {
-    overflow: visible;
-}
-
 #experience-timeline {
+    max-width: 1000px;
+    margin: 0 auto;
     position: relative;
-    margin: 0 100px;
 }
 
 #experience-timeline > ul {
     list-style: none;
-    width: 80%;
 }
 
 /* the long dotted line */
 #experience-timeline > ul:before {
     content: '';
-    width: 2px;
     height: 100%;
     position: absolute;
     border-left: 2px dashed black;
@@ -207,7 +182,6 @@ body {
     padding: 8px;
     border: 2px solid black;
     position: relative;
-    overflow: visible;
 }
 
 #experience-timeline > ul > li {
@@ -260,12 +234,6 @@ body {
     top: calc(100% - 15px);
 }
 
-@media only screen and (max-width: 800px) {
-    #experience-timeline {
-        margin: 0 auto;
-    }
-}
-
 @media only screen and (max-width: 600px) {
 
     #experience-timeline > ul > li {
@@ -291,7 +259,6 @@ body {
 }
 
 #contact .contact-item-image {
-    position: relative;
     border-radius: 5px;
 }
 
@@ -304,8 +271,6 @@ body {
 /* FOOTER */
 
 .footer {
-    position: relative;
-    overflow: hidden;
     margin: 5% 5% 5% 5%;
     border-top:  2px solid lightgray;
     padding-top: 20px;
