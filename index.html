@@ -6,10 +6,10 @@
     <meta name="description" content="Jeremy Ong's Personal Website">
     <meta name="google" content="nositelinkssearchbox">
 
-    <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
     <link rel="stylesheet" href="styles/image-picker.css">
+    <link rel="stylesheet" href="styles/styles.css">
 
     <script type="text/javascript" src="scripts/egg.min.js"></script>
     <script type="text/javascript" src="scripts/jquery-3.3.1.min.js"></script>
@@ -33,8 +33,35 @@
     <title>Jeremy Ong</title>
   </head>
   <body>
+
     <!-- Scroll Up Button -->
     <img src="images/up.svg" alt="Up" id="up">
+
+    <!-- Fox Hunt -->
+    <div id="fox-hunt">
+      <!-- Fox Hunt Next -->
+      <a id="fox-next" class="no-underline-link">
+        &#129418;
+      </a>
+      <div id="fox-next-speak">
+        Ahh, you found me! Try to find me again.
+      </div>
+
+      <!-- Fox Hunt Next Next -->
+      <a id="fox-next-next" class="no-underline-link">
+        &#129418;
+      </a>
+      <div id="fox-next-next-speak">
+        Found again! OK, last one, though it will be harder.<br>Hint: My name is KC
+      </div>
+
+      <!-- Fox Hunt Hard -->
+      <div id="fox-hard-container">
+        <h1>You Found Me!</h1>
+        <!-- Looks like you know how to inspect element. Here's another hint: you have to type a combination of keys -->
+        <img src="images/fox.gif" alt="Fox Says Hi" id="fox-hard">
+      </div>
+    </div>
 
     <!-- Navigation Bar -->
     <div id="navbar" class="clearfix">
@@ -76,34 +103,7 @@
 
     <!-- Projects -->
     <div class="section" id="projects">
-
-      <!-- Fox Hunt Next -->
-      <a id="fox-next" class="no-underline-link">
-        &#129418;
-      </a>
-      <div id="fox-next-speak">
-        Ahh, you found me! Try finding me again.
-      </div>
-
-      <!-- Projects Picker -->
       <h1 class="section-header">PROJECTS</h1>
-      <select id="projects-picker">
-        <option data-img-src="images/ramen.png" data-img-class="projects-pick" data-img-alt="Bob's Ramen" value="ramen">
-          Bob's Ramen
-        </option>
-        <option data-img-src="images/resistar.jpg" data-img-class="projects-pick" data-img-alt="ResistAR" value="resistar">
-          ResistAR
-        </option>
-        <option data-img-src="images/inventex.jpg" data-img-class="projects-pick" data-img-alt="Inventex" value="inventex">
-          Inventex
-        </option>
-        <option data-img-src="images/discourse.jpg" data-img-class="projects-pick" data-img-alt="Facebook Discourse" value="discourse">
-          Facebook Discourse
-        </option>
-        <option data-img-src="images/modware.jpg" data-img-class="projects-pick" data-img-alt="Modware" value="modware">
-          Modware
-        </option>
-      </select>
 
       <!-- Projects Body -->
       <div id="projects-body">
@@ -111,7 +111,7 @@
         <!-- Bob's Ramen -->
         <div class="project-item project-active" id="ramen">
           <div class="clearfix">
-            <img class="project-image" alt="Bob's Ramen" src="images/ramen.png"/>
+            <img class="project-image" alt="Bob's Ramen" src="images/projects/ramen.jpg"/>
             <p class="pull-right">September 2016</p>
           </div>
           <p class="project-description section-text clearfix">
@@ -136,10 +136,10 @@
         <!-- ResistAR -->
         <div class="project-item" id="resistar">
           <div class="clearfix">
-            <img class="project-image" alt="ResistAR" src="images/resistar.jpg"/>
+            <img class="project-image" alt="ResistAR" src="images/projects/resistar.jpg"/>
             <p class="pull-right">February 2017</p>
           </div>
-          <p class="project-description section-text">
+          <p class="project-description section-text clearfix">
             When you're at a hackathon with 3 other ECE (electrical and computer engineering)
             majors you shouldn't be surprised if your project is about resistors. Our idea was
             to design 3D printed parts representing circuit components (source, ground, resistor),
@@ -161,10 +161,10 @@
         <!-- Inventex -->
         <div class="project-item" id="inventex">
           <div class="clearfix">
-            <img class="project-image" alt="Inventex" src="images/inventex.jpg"/>
+            <img class="project-image" alt="Inventex" src="images/projects/inventex.jpg"/>
             <p class="pull-right">September 2017</p>
           </div>
-          <p class="project-description section-text">
+          <p class="project-description section-text clearfix">
             Inventex is an internet-enabled hardware sorter and inventory maintenance machine.
             It works with a mobile app built in React Native. I was in charge of making the
             mobile app and configuring the raspberry pi to take incoming commands. The problem
@@ -184,10 +184,10 @@
         <!-- Facebook Discourse -->
         <div class="project-item" id="discourse">
           <div class="clearfix">
-            <img class="project-image" alt="Facebook Discourse" src="images/discourse.jpg"/>
+            <img class="project-image" alt="Facebook Discourse" src="images/projects/discourse.jpg"/>
             <p class="pull-right">November 2017</p>
           </div>
-          <p class="project-description section-text">
+          <p class="project-description section-text clearfix">
             At the Facebook Global Hackathon, my team and I created something called Facebook
             Discourse. A bit of background about the Facebook Global Hackathon: every year
             Facebook invites the winners of a handful of hackathons from across the globe.
@@ -206,10 +206,10 @@
         <!-- Modware -->
         <div class="project-item" id="modware">
           <div class="clearfix">
-            <img class="project-image" alt="Modware" src="images/modware.jpg"/>
+            <img class="project-image" alt="Modware" src="images/projects/modware.jpg"/>
             <p class="pull-right">January 2018</p>
           </div>
-          <p class="project-description section-text">
+          <p class="project-description section-text clearfix">
             At PennApps, my team and I made Modware, a modular hardware prototyping kit for the
             software engineer to take the "hard" out of hardware. Modware is a magnetic board
             with magnetically attachable hardware components such as light switches, knobs, and
@@ -231,6 +231,28 @@
         </div>
 
       </div>
+
+      <p id="project-picker-hint">~See all my projects~</p>
+
+      <!-- Project Picker -->
+      <select id="projects-picker">
+        <option data-img-src="images/project_thumbnails/ramen.jpg" data-img-class="projects-pick" data-img-alt="Bob's Ramen" value="ramen">
+          Bob's Ramen
+        </option>
+        <option data-img-src="images/project_thumbnails/resistar.jpg" data-img-class="projects-pick" data-img-alt="ResistAR" value="resistar">
+          ResistAR
+        </option>
+        <option data-img-src="images/project_thumbnails/inventex.jpg" data-img-class="projects-pick" data-img-alt="Inventex" value="inventex">
+          Inventex
+        </option>
+        <option data-img-src="images/project_thumbnails/discourse.jpg" data-img-class="projects-pick" data-img-alt="Facebook Discourse" value="discourse">
+          Facebook Discourse
+        </option>
+        <option data-img-src="images/project_thumbnails/modware.jpg" data-img-class="projects-pick" data-img-alt="Modware" value="modware">
+          Modware
+        </option>
+      </select>
+
     </div>
 
     <!-- Experience -->
@@ -280,15 +302,6 @@
               poses of perception training data along with their properties. For these projects
               I used Tensorflow, Python, and C++.
               </p>
-
-              <!-- Fox Hunt Next Next -->
-              <a id="fox-next-next" class="no-underline-link">
-                &#129418;
-              </a>
-              <div id="fox-next-next-speak">
-                Found again! OK, last one, though it will be harder.<br>Hint: My name is KC
-              </div>
-
             </div>
             <span class="experience-times">
               <span>Jun.<br>2018</span>
@@ -352,7 +365,6 @@
 
     <!-- Contact -->
     <div class="footer clearfix" id="contact">
-
       <!-- Fox Hunt Start -->
       <a id="fox-start" class="pull-left no-underline-link">
         &#129418;
@@ -360,6 +372,9 @@
       <div id="fox-start-speak" class="pull-left">
         Hi! I'm KC! Let's play fox hunt. I hide, you find me!
       </div>
+
+      <!-- Fox Hunt Hard Hint -->
+      <div id="fox-hard-hint" class="pull-left">Hint: My name is KC</div>
 
       <a href="https://linkedin.com/in/jearmoo">
         <img class="contact-item contact-item-image hover-fade pull-right" alt="LinkedIn" src="images/linkedin.png" height=25 width=25/>
@@ -375,11 +390,5 @@
       </a>
     </div>
 
-    <!-- Fox Hunt Hard -->
-    <div id="fox-hard-container">
-      <h1>You Found Me!</h1>
-      <!-- Looks like you know how to inspect element. Here's another hint: you have to type a combination of keys -->
-      <img src="images/fox.gif" alt="Fox Says Hi" id="fox-hard">
-    </div>
   </body>
 </html>

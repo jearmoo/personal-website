@@ -1,4 +1,5 @@
 body {
+    position: relative;
     font-family: Montserrat, sans-serif;
 }
 
@@ -89,7 +90,7 @@ body {
 /* SECTIONS */
 
 .section {
-    margin: 3% 5%;
+    margin: 5% 5%;
     position: relative;
 }
 
@@ -100,9 +101,10 @@ body {
 /* ME */
 
 #aboutme #me-img {
-    width: 50%;
+    width: 45%;
     height: auto;
-    margin-right: 5%;
+    margin-right: 50px;
+    max-width: 800px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -130,20 +132,37 @@ body {
 
 #projects-body .project-image {
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     height: auto;
     margin: 0 auto;
     display: block;
+    padding: 5px;
+    border: 2px solid lightgray;
 }
 
 #projects .projects-pick {
-    width: 50px;
+    width: 90px;
     height: auto;
 }
 
+#projects ul.thumbnails.image_picker_selector {
+    width: 520px;
+    margin: 0 auto;
+}
+
+#project-picker-hint {
+    text-align: center;
+    margin-bottom: 0;
+    font-style: italic;
+}
+
 @media only screen and (max-width: 600px) {
+    #projects ul.thumbnails.image_picker_selector {
+        width: 295px;
+    }
+
     #projects .projects-pick {
-        width: 30px;
+        width: 45px;
         height: auto;
     }
 }
@@ -276,6 +295,7 @@ body {
     padding-top: 20px;
     padding-right: 10px;
     padding-left: 10px;
+    position: relative;
 }
 
 /* FONTS */
@@ -339,6 +359,14 @@ body {
 }
 
 /* FOX HUNT */
+
+#fox-hunt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
 
 #fox-start {
     position: absolute;
@@ -487,20 +515,16 @@ body {
     z-index: 99;
 }
 
+#fox-hard-hint {
+    display: none;
+    font-style: italic;
+}
+
 /* FADE */
 
 @keyframes fade {
     from {opacity: 1;}
     to {opacity: .3;}
-}
-
-@keyframes fade-in {
-    from {opacity: 0;}
-    to {opacity: 1;}
-}
-
-.hover-fade {
-    text-decoration: none;
 }
 
 @media only screen and (min-width: 800px) {
