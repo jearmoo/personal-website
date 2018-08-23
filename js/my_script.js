@@ -1,7 +1,14 @@
+/* pixel threshold before scroll up button is shown */
 const SCROLL_BUTTON_THRESHOLD = 100;
+
+/* time to smooth scroll to a location on the page */
 const SCROLL_TIME_MS = 1500;
+
+/* percent ranges for positions of hidden foxes */
 const FOX_NEXT_TOP_RIGHT = [0,60,0,60];
 const FOX_NEXT_NEXT_BOTTOM_LEFT = [0,50,25,55];
+const FOX_NEXT_SPEECH_OFFSET = [0,30];
+const FOX_NEXT_NEXT_SPEECH_OFFSET = [30,0];
 
 $(document).ready(function(){
     /* SCROLL UP BUTTON */
@@ -22,7 +29,7 @@ $(document).ready(function(){
         }, SCROLL_TIME_MS, 'easeOutCubic');
     })
 
-    /* RESPONSIVE NAVBAR MENU ICON */
+    /* RESPONSIVE NAVBAR MENU ICON SHOW AND HIDE */
     $("#navbar-menu-icon").click(function(){
         const cn = $("#compact-navbar");
         if (cn.is(":visible")) {
@@ -32,7 +39,7 @@ $(document).ready(function(){
         }
     })
 
-    /* NAVBAR LINKS */
+    /* NAVBAR LINKS SMOOTH SCROLLING */
     $('a[href*="#"]').on('click', function (e) {
         e.preventDefault();
 
@@ -44,7 +51,7 @@ $(document).ready(function(){
         }, SCROLL_TIME_MS, 'easeOutCubic');
     });
 
-    /* PROJECTS PICKER */
+    /* PROJECTS PICKER FADER */
     $("#projects-picker").imagepicker({
         changed: function(select, newValues) {
             const selectedValue = newValues[0];
@@ -57,51 +64,36 @@ $(document).ready(function(){
         }
     });
 
-    function randomNumber(lo,hi) {
+    /* FOX HUNT */
+    function randInt(lo,hi) {
         return (Math.floor(Math.random() * (hi-lo+1)) + lo).toString() ;
     }
 
-    function randomCSSTopRight(topRight,topOffset,rightOffset) {
-        const top = randomNumber(topRight[0], topRight[1]) + "%";
-        const right = randomNumber(topRight[2], topRight[3]) + "%";
+    /* generate css for random position for a fox and its speech bubble */
+    function randomPosCSS(ranges, firstName, secondName, offset) {
+        const first = randInt(ranges[0], ranges[1]) + "%";
+        const second = randInt(ranges[2], ranges[3]) + "%";
         return [
             {
-                top: top,
-                right: right
+                [firstName]: first,
+                [secondName]: second
             },
             {
-                top: "calc(" + top + " + " + topOffset + "px)",
-                right: "calc(" + right + " + " + rightOffset + "px)"
+                [firstName]: "calc(" + first + " + " + offset[0] + "px)",
+                [secondName]: "calc(" + second + " + " + offset[1] + "px)"
             }
         ];
     }
 
-    function randomCSSBottomLeft(bottomLeft,bottomOffset,leftOffset) {
-        const bottom = randomNumber(bottomLeft[0], bottomLeft[1]) + "%";
-        const left = randomNumber(bottomLeft[2], bottomLeft[3]) + "%";
-        return [
-            {
-                bottom: bottom,
-                left: left
-            },
-            {
-                bottom: "calc(" + bottom + " + " + bottomOffset + "px)",
-                left: "calc(" + left + " + " + leftOffset + "px)"
-            }
-        ];
-    }
-
-
-    /* FOX HUNT */
     $("#fox-start").one('click', function(){
-        const foxNextPositions = randomCSSTopRight(FOX_NEXT_TOP_RIGHT,0,30);
+        const foxNextPositions = randomPosCSS(FOX_NEXT_TOP_RIGHT,'top','right',FOX_NEXT_SPEECH_OFFSET);
         $("#fox-start-speak").slideDown(null, function() {
             $(this).delay(9000).fadeOut();
             $("#fox-start").delay(10000).fadeOut();
             $("#fox-next").css(foxNextPositions[0]).delay(11000).fadeIn();
         });
 
-        const foxNextNextPositions = randomCSSBottomLeft(FOX_NEXT_NEXT_BOTTOM_LEFT,30,0);
+        const foxNextNextPositions = randomPosCSS(FOX_NEXT_NEXT_BOTTOM_LEFT,'bottom','left',FOX_NEXT_NEXT_SPEECH_OFFSET);
         $("#fox-next").one('click', function(){
             $("#fox-next-speak").css(foxNextPositions[1]).slideDown(null, function() {
                 $(this).delay(9000).fadeOut();
