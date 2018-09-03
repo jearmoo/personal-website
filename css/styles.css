@@ -133,7 +133,7 @@ body {
 }
 
 #projects-body .project-image {
-    width: 100%;
+    width: 96%;
     max-width: 600px;
     height: auto;
     margin: 0 auto;
@@ -277,27 +277,39 @@ body {
     margin: 0 5px;
     font-size: .875em;
     color: black;
+    float: right;
 }
 
 #contact .contact-item-image {
+    margin: 0 5px;
     border-radius: 5px;
+    float: right;
 }
 
 @media only screen and (max-width: 600px) {
     #contact .contact-item {
         font-size: .75em;
+        float: left;
     }
 }
 
 /* FOOTER */
 
 .footer {
-    margin: 5% 5% 5% 5%;
+    margin: 5% 5% 2.5% 5%;
     border-top:  2px solid lightgray;
     padding-top: 20px;
     padding-right: 10px;
     padding-left: 10px;
     position: relative;
+}
+
+/* LAST UPDATED */
+
+#last-updated {
+    margin: 0px 5%;
+    font-size: .5em;
+    text-align: center;
 }
 
 /* FONTS */
