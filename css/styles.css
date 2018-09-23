@@ -148,7 +148,7 @@ body {
 }
 
 #projects ul.thumbnails.image_picker_selector {
-    width: 520px;
+    width: 620px;
     margin: 0 auto;
 }
 
@@ -160,7 +160,7 @@ body {
 
 @media only screen and (max-width: 600px) {
     #projects ul.thumbnails.image_picker_selector {
-        width: 295px;
+        width: 175px;
     }
 
     #projects .projects-pick {

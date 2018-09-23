@@ -231,12 +231,39 @@
           </p>
         </div>
 
+        <!-- Simon -->
+        <div class="project-item" id="simon">
+          <div class="clearfix">
+            <img class="project-image" alt="Modware" src="img/projects/simon.jpg"/>
+            <p class="pull-right">September 2018</p>
+          </div>
+          <p class="project-description section-text clearfix">
+            The Simon System consists of Simon, our robot that learns to perform the human's input
+            actions. There are two "play" fields, one for the human to perform actions and the other
+            for Simon to reproduce actions. Everything starts with a human action. The Simon System
+            detects human motion and records what happens. Then those actions are interpreted into
+            actions that Simon can take. Then Simon performs those actions in the second play field,
+            making sure to plan efficient paths taking into consideration that it is a robot in the
+            field. I implemented the computer vision, path planning, robot feedback control, and
+            communication between components of the project. The computer vision systems intelligently
+            detects when updates are made to the human control field and acquires normalized grid
+            size of the play field using QR boundaries. The robot's orientation is also corrected
+            using information from the computer vision.  The path planning system uses a modified
+            BFS algorithm taking into account path smoothing with realtime updates from the
+            low-level controls to calibrate path plan throughout execution. Communication
+            throughout the project uses bluetooth and unix sockets.
+            <br/>
+            <a class="pull-right" href="https://devpost.com/software/the-simon-system">
+              Check it out
+            </a>
+          </p>
+        </div>
       </div>
 
       <p id="project-picker-hint">~See all my projects~</p>
 
       <!-- Project Picker -->
-      <select id="projects-picker">
+      <select class="projects-picker">
         <option data-img-src="img/project_thumbnails/ramen.jpg" data-img-class="projects-pick" data-img-alt="Bob's Ramen" value="ramen">
           Bob's Ramen
         </option>
@@ -251,6 +278,9 @@
         </option>
         <option data-img-src="img/project_thumbnails/modware.jpg" data-img-class="projects-pick" data-img-alt="Modware" value="modware">
           Modware
+        </option>
+        <option data-img-src="img/project_thumbnails/simon.jpg" data-img-class="projects-pick" data-img-alt="Simon" value="simon">
+          Simon
         </option>
       </select>
 
@@ -393,7 +423,7 @@
 
     <div id="last-updated">
       <p>
-        last updated August 25, 2018.
+        last updated September 22, 2018.
       </p>
     </div>
 

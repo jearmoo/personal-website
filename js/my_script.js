@@ -52,7 +52,7 @@ $(document).ready(function(){
     });
 
     /* PROJECTS PICKER FADER */
-    $("#projects-picker").imagepicker({
+    $(".projects-picker").imagepicker({
         changed: function(select, newValues) {
             const selectedValue = newValues[0];
             const activeClass = "project-active";
