@@ -10,6 +10,15 @@ const FOX_NEXT_NEXT_BOTTOM_LEFT = [0,50,25,55];
 const FOX_NEXT_SPEECH_OFFSET = [0,30];
 const FOX_NEXT_NEXT_SPEECH_OFFSET = [30,0];
 
+/* fox delay times */
+
+const FOX_DELAY = 6000;
+const FOX_SPEECH_DELAY_OFFSET = 1000;
+const FOX_NEXT_DELAY_OFFSET = 1000;
+const FOX_SPEECH_DELAY = FOX_DELAY-FOX_SPEECH_DELAY_OFFSET;
+const FOX_NEXT_DELAY = FOX_DELAY + FOX_NEXT_DELAY_OFFSET;
+const FINAL_FOX_TIME = 5000;
+
 $(document).ready(function(){
     /* SCROLL UP BUTTON */
     $(window).scroll(function(){
@@ -88,33 +97,33 @@ $(document).ready(function(){
     $("#fox-start").one('click', function(){
         const foxNextPositions = randomPosCSS(FOX_NEXT_TOP_RIGHT,'top','right',FOX_NEXT_SPEECH_OFFSET);
         $("#fox-start-speak").slideDown(null, function() {
-            $(this).delay(9000).fadeOut();
-            $("#fox-start").delay(10000).fadeOut();
-            $("#fox-next").css(foxNextPositions[0]).delay(11000).fadeIn();
+            $(this).delay(FOX_SPEECH_DELAY).fadeOut();
+            $("#fox-start").delay(FOX_DELAY).fadeOut();
+            $("#fox-next").css(foxNextPositions[0]).delay(FOX_NEXT_DELAY).fadeIn();
         });
 
         const foxNextNextPositions = randomPosCSS(FOX_NEXT_NEXT_BOTTOM_LEFT,'bottom','left',FOX_NEXT_NEXT_SPEECH_OFFSET);
         $("#fox-next").one('click', function(){
             $("#fox-next-speak").css(foxNextPositions[1]).slideDown(null, function() {
-                $(this).delay(9000).fadeOut();
-                $("#fox-next").delay(10000).fadeOut();
-                $("#fox-next-next").css(foxNextNextPositions[0]).delay(11000).fadeIn();
+                $(this).delay(FOX_SPEECH_DELAY).fadeOut();
+                $("#fox-next").delay(FOX_DELAY).fadeOut();
+                $("#fox-next-next").css(foxNextNextPositions[0]).delay(FOX_NEXT_DELAY).fadeIn();
             });
 
             $("#fox-next-next").one('click', function(){
                 $("#fox-next-next-speak").css(foxNextNextPositions[1]).slideDown(null, function() {
-                    $(this).delay(9000).fadeOut();
-                    $("#fox-next-next").delay(10000).fadeOut();
+                    $(this).delay(FOX_SPEECH_DELAY).fadeOut();
+                    $("#fox-next-next").delay(FOX_DELAY).fadeOut();
                     setTimeout(function(){
                         var egg = new Egg();
                         egg.addCode("up,up,down,down,left,right,left,right,b,a", function() {
                             $('#fox-hard-container').fadeIn(null, function() {
-                                $(this).delay(5000).fadeOut();
+                                $(this).delay(FINAL_FOX_TIME).fadeOut();
                             }).css('display', 'flex');
                         });
                         egg.listen();
-                    }, 11000)
-                    $("#fox-hard-hint").delay(11000).fadeIn();
+                    }, FOX_NEXT_DELAY)
+                    $("#fox-hard-hint").delay(FOX_NEXT_DELAY).fadeIn();
                 });
             });
         });
