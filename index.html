@@ -1,434 +1,502 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Jeremy Ong's Personal Website">
-    <meta name="google" content="nositelinkssearchbox">
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
-    <link rel="stylesheet" href="css/image-picker.css">
-    <link rel="stylesheet" href="css/styles.css">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Jeremy Ong's Personal Website">
+  <meta name="google" content="nositelinkssearchbox">
 
-    <script type="text/javascript" src="js/egg.min.js"></script>
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
-    <script type="text/javascript" src="js/image-picker.min.js"></script>
-    <script type="text/javascript" src="js/my_script.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Questrial">
+  <link rel="stylesheet" href="css/image-picker.css">
+  <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124170979-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <script type="text/javascript" src="js/egg.min.js"></script>
+  <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+  <script type="text/javascript" src="js/jquery.easing.1.3.min.js"></script>
+  <script type="text/javascript" src="js/image-picker.min.js"></script>
+  <script type="text/javascript" src="js/my_script.js"></script>
 
-      gtag('config', 'UA-124170979-1');
-    </script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124170979-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    gtag('config', 'UA-124170979-1');
+  </script>
 
-    <title>Jeremy Ong</title>
-  </head>
-  <body>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
 
-    <!-- Scroll Up Button -->
-    <img src="img/up.svg" alt="Up" id="up">
+  <title>Jeremy Ong</title>
+</head>
 
-    <!-- Fox Hunt -->
-    <div id="fox-hunt">
-      <!-- Fox Hunt Next -->
-      <a id="fox-next" class="no-underline-link">
-        &#129418;
-      </a>
-      <div id="fox-next-speak">
-        Ahh, you found me! Try to find me again.
-      </div>
+<body>
 
-      <!-- Fox Hunt Next Next -->
-      <a id="fox-next-next" class="no-underline-link">
-        &#129418;
-      </a>
-      <div id="fox-next-next-speak">
-        Found again! OK, last one, though it will be harder.<br>Hint: My name is KC
-      </div>
+  <!-- Scroll Up Button -->
+  <img src="img/up.svg" alt="Up" id="up">
 
-      <!-- Fox Hunt Hard -->
-      <div id="fox-hard-container">
-        <h1>You Found Me!</h1>
-        <!-- Looks like you know how to inspect element. Here's another hint: you have to type a combination of keys -->
-        <img src="img/fox.gif" alt="Fox Says Hi" id="fox-hard">
-      </div>
+  <!-- Fox Hunt -->
+  <div id="fox-hunt">
+    <!-- Fox Hunt Next -->
+    <a id="fox-next" class="no-underline-link">
+      &#129418;
+    </a>
+    <div id="fox-next-speak">
+      Ahh, you found me! Try to find me again.
     </div>
 
-    <!-- Navigation Bar -->
-    <div id="navbar" class="clearfix">
-      <a class="pull-left underline-link" id="navbar-name" href="#aboutme">Jeremy Ong</a>
-      <a class="pull-left underline-link" href="#projects">projects</a>
-      <a class="pull-left underline-link" href="#experience">experience</a>
-      <a class="pull-left underline-link" href="#contact">contact</a>
-
-      <a class="pull-right underline-link" id="navbar-menu-icon">&#9776;</a>
-      <a class="pull-right underline-link" id="resume" href="resume.pdf">resume</a>
-
-      <div id="compact-navbar" class="clearfix">
-        <a class="underline-link" href="#projects">projects</a>
-        <a class="underline-link" href="#experience">experience</a>
-        <a class="underline-link" href="#contact">contact</a>
-        <a class="underline-link" id="compact-resume" href="resume.pdf">resume</a>
-      </div>
+    <!-- Fox Hunt Next Next -->
+    <a id="fox-next-next" class="no-underline-link">
+      &#129418;
+    </a>
+    <div id="fox-next-next-speak">
+      Found again! OK, last one, though it will be harder.<br>Hint: My name is KC
     </div>
 
-    <!-- About Me -->
-    <div class="section clearfix" id="aboutme">
-      <h1 class="section-header">ME</h1>
-      <img src="img/me.jpeg" alt="Me" id="me-img" class="pull-left"/>
-      <p class="section-text">
+    <!-- Fox Hunt Hard -->
+    <div id="fox-hard-container">
+      <h1>You Found Me!</h1>
+      <!-- Looks like you know how to inspect element. Here's another hint: you have to type a combination of keys -->
+      <img src="img/fox.gif" alt="Fox Says Hi" id="fox-hard">
+    </div>
+  </div>
+
+  <!-- Navigation Bar -->
+  <div id="navbar" class="clearfix">
+    <a class="pull-left underline-link" id="navbar-name" href="#aboutme">Jeremy Ong</a>
+    <a class="pull-left underline-link" href="#projects">projects</a>
+    <a class="pull-left underline-link" href="#experience">experience</a>
+    <a class="pull-left underline-link" href="#contact">contact</a>
+
+    <a class="pull-right underline-link" id="navbar-menu-icon">&#9776;</a>
+    <a class="pull-right underline-link" id="resume" href="resume.pdf">resume</a>
+
+    <div id="compact-navbar" class="clearfix">
+      <a class="underline-link" href="#projects">projects</a>
+      <a class="underline-link" href="#experience">experience</a>
+      <a class="underline-link" href="#contact">contact</a>
+      <a class="underline-link" id="compact-resume" href="resume.pdf">resume</a>
+    </div>
+  </div>
+
+  <!-- About Me -->
+  <div class="section clearfix" id="aboutme">
+    <h1 class="section-header">ME</h1>
+    <img src="img/me.jpg" alt="Me" id="me-img" class="pull-left" />
+    <div class="section-text">
+      <p>
         I was born and raised in Olympia, Washington, with my mom, dad, and two younger brothers.
         From a young age, I've found joy in solving puzzles, and this has led me to explore the
         field of Computer Science. It's my dream to have a positive influence across the globe, and
         I believe software is the appropriate medium for me to accomplish this. I've become
         enamored with the seemingly endless applications of machine learning and have thus chosen
         machine learning as my area of specialization.
-        <br/><br/>
-        Outside of computer stuff, I enjoy spending time with friends, climbing rocks, and playing
-        spikeball. I am learning to play the ukelele and satiating my curiosity with books and
-        articles.
-        <br/><br/>
-        Currently I'm pursuing a B.S. in Computer Science at Carnegie Mellon University as a junior.
+      </p>
+      <p>
+        Outside of computer science, I enjoy spending time with friends, rock climbing, and playing
+        spikeball. I also love to travel, explore, and learn new skills.
+      </p>
+      <p>
+        Currently I'm pursuing a B.S. in Computer Science at Carnegie Mellon University. I am
+        graduating in Spring 2020, so I am looking for full time opportunities!
       </p>
     </div>
+  </div>
 
-    <!-- Projects -->
-    <div class="section" id="projects">
-      <h1 class="section-header">PROJECTS</h1>
+  <!-- Projects -->
+  <div class="section" id="projects">
+    <h1 class="section-header">PROJECTS</h1>
 
-      <!-- Projects Body -->
-      <div id="projects-body">
+    <!-- Projects Body -->
+    <div id="projects-body">
 
-        <!-- Bob's Ramen -->
-        <div class="project-item project-active" id="ramen">
-          <div class="clearfix">
-            <img class="project-image" alt="Bob's Ramen" src="img/projects/ramen.jpg"/>
-            <p class="pull-right">September 2016</p>
-          </div>
-          <p class="project-description section-text clearfix">
-            This was the beginning of my hackathon career.
-            The idea for a robotic ramen machine actually came about before I entered college.
-            Over the summer, I was direct messaging my future roommate, and we were fantasizing
-            how great an automatic ramen machine would be. Ramen is the quintessential college
-            meal, and since we all know we're too busy studying, a ramen robot seems necessary
-            for a college student's life. A few weeks into college, we heard about CMU's
-            beginner hackathon HackCMU. This would be the perfect opportunity to build this!
-            We bought wood, scrapped together cardboard and duct tape, and found an arduino, and
-            the rest is history. We successfully created an internet of things robotic ramen
-            preparer controlled by an iPhone app. Bob's Ramen won the Mentor's Choice Award
-            sponsored by Microsoft.
-            <br/>
-            <a class="pull-right" href="https://devpost.com/software/bob-s-ramen">
-              Check it out
-            </a>
-          </p>
+      <!-- Bob's Ramen -->
+      <div class="project-item project-active" id="ramen">
+        <div class="clearfix">
+          <img class="project-image" alt="Bob's Ramen" src="img/projects/ramen.jpg" />
+          <p class="pull-right">September 2016</p>
         </div>
-
-        <!-- ResistAR -->
-        <div class="project-item" id="resistar">
-          <div class="clearfix">
-            <img class="project-image" alt="ResistAR" src="img/projects/resistar.jpg"/>
-            <p class="pull-right">February 2017</p>
-          </div>
-          <p class="project-description section-text clearfix">
-            When you're at a hackathon with 3 other ECE (electrical and computer engineering)
-            majors you shouldn't be surprised if your project is about resistors. Our idea was
-            to design 3D printed parts representing circuit components (source, ground, resistor),
-            and then make an app that would visualize the circuit flow through a given circuit
-            configuration. None of us had experience with augmented reality, but we decided to
-            go for the challenge. The project would also have educational applications. We
-            happened upon the Vuforia SDK which could be coupled with Unity to make augmented
-            reality apps using QR codes as targets. I primarily worked on the algorithms which
-            outputted the electron flow direction and locations as well as the solved resistor
-            potential differences and electric current. We made ResistAR at TartanHacks, Carnegie
-            Mellon's premiere hackathon and won the grand prize.
-            <br/>
-            <a class="pull-right" href="https://devpost.com/software/resistar">
-              Check it out
-            </a>
-          </p>
-        </div>
-
-        <!-- Inventex -->
-        <div class="project-item" id="inventex">
-          <div class="clearfix">
-            <img class="project-image" alt="Inventex" src="img/projects/inventex.jpg"/>
-            <p class="pull-right">September 2017</p>
-          </div>
-          <p class="project-description section-text clearfix">
-            Inventex is an internet-enabled hardware sorter and inventory maintenance machine.
-            It works with a mobile app built in React Native. I was in charge of making the
-            mobile app and configuring the raspberry pi to take incoming commands. The problem
-            it was aimed towards was messy workspaces. With Inventex, you can scan the piece of
-            hardware that you want to desposit with the app, then put it in the machine's input
-            slot. The machine then allocates a bin for that category of hardware and deposits
-            the hardware in it. When you want to retrieve something, you can select the
-            hardware type and amount from the app interface and the machine will spit it out for
-            you. We made Inventex at PennApps, and we won the best hardware hack award.
-            <br/>
-            <a class="pull-right" href="https://devpost.com/software/toolhub">
-              Check it out
-            </a>
-          </p>
-        </div>
-
-        <!-- Facebook Discourse -->
-        <div class="project-item" id="discourse">
-          <div class="clearfix">
-            <img class="project-image" alt="Facebook Discourse" src="img/projects/discourse.jpg"/>
-            <p class="pull-right">November 2017</p>
-          </div>
-          <p class="project-description section-text clearfix">
-            At the Facebook Global Hackathon, my team and I created something called Facebook
-            Discourse. A bit of background about the Facebook Global Hackathon: every year
-            Facebook invites the winners of a handful of hackathons from across the globe.
-            When I participated, there were 20 teams from 11 different countries. I qualified
-            because my team won the grand prize at TartanHacks. Some other hackathons from the
-            US that are represented are PennApps, HackMIT, and TreeHacks (Stanford). Facebook
-            Discourse is a debate platform that fosters positive discourse by only allowing
-            positive interactions from spectators like up-voting debate points and also adding
-            credible sources. Additionally, users can follow debate threads that are
-            automatically detected by the system. This could be used with presidential debates
-            by visualizing the arguments on our platform. We presented Facebook Discourse to
-            the VPs of technology of OculusVR, WhatsApp, and Instagram and won first prize.
-          </p>
-        </div>
-
-        <!-- Modware -->
-        <div class="project-item" id="modware">
-          <div class="clearfix">
-            <img class="project-image" alt="Modware" src="img/projects/modware.jpg"/>
-            <p class="pull-right">January 2018</p>
-          </div>
-          <p class="project-description section-text clearfix">
-            At PennApps, my team and I made Modware, a modular hardware prototyping kit for the
-            software engineer to take the "hard" out of hardware. Modware is a magnetic board
-            with magnetically attachable hardware components such as light switches, knobs, and
-            lights. The idea is that with Modware, the user would be able to easily hook up
-            hardware components to anything they might need without having to know the details
-            of electrical engineering. Modware also includes a UI to connect
-            the components to each other and configure APIs with the hardware components.
-            One of the examples we set up was using a knob to control the depth of a Sierpinski's
-            triangle rendering. A software engineer could also make a light flash to alert
-            them of something like a stock hitting a certain price. I personally worked on the
-            backend design including data structures and data passing and also the examples of
-            how Modware can be used by a software engineer. Modware earned us four awards: the
-            PennApps 2nd place prize, Lutron's IOT award, Best Hardware Hack, and Hacker's
-            favorite award.
-            <br/>
-            <a class="pull-right" href="https://devpost.com/software/modware">
-              Check it out
-            </a>
-          </p>
-        </div>
-
-        <!-- Simon -->
-        <div class="project-item" id="simon">
-          <div class="clearfix">
-            <img class="project-image" alt="Modware" src="img/projects/simon.jpg"/>
-            <p class="pull-right">September 2018</p>
-          </div>
-          <p class="project-description section-text clearfix">
-            The Simon System consists of Simon, our robot that learns to perform the human's input
-            actions. There are two "play" fields, one for the human to perform actions and the other
-            for Simon to reproduce actions. Everything starts with a human action. The Simon System
-            detects human motion and records what happens. Then those actions are interpreted into
-            actions that Simon can take. Then Simon performs those actions in the second play field,
-            making sure to plan efficient paths taking into consideration that it is a robot in the
-            field. I implemented the computer vision, path planning, robot feedback control, and
-            communication between components of the project. The computer vision systems intelligently
-            detects when updates are made to the human control field and acquires normalized grid
-            size of the play field using QR boundaries. The robot's orientation is also corrected
-            using information from the computer vision.  The path planning system uses a modified
-            BFS algorithm taking into account path smoothing with realtime updates from the
-            low-level controls to calibrate path plan throughout execution. Communication
-            throughout the project uses bluetooth and unix sockets.
-            <br/>
-            <a class="pull-right" href="https://devpost.com/software/the-simon-system">
-              Check it out
-            </a>
-          </p>
-        </div>
+        <p class="project-description section-text clearfix">
+          This was the beginning of my hackathon career.
+          The idea for a robotic ramen machine actually came about before I entered college.
+          Over the summer, I was direct messaging my future roommate, and we were fantasizing
+          how great an automatic ramen machine would be. Ramen is the quintessential college
+          meal, and since we all know we're too busy studying, a ramen robot seems necessary
+          for a college student's life. A few weeks into college, we heard about CMU's
+          beginner hackathon HackCMU. This would be the perfect opportunity to build this!
+          We bought wood, scrapped together cardboard and duct tape, and found an arduino, and
+          the rest is history. We successfully created an internet of things robotic ramen
+          preparer controlled by an iPhone app. Bob's Ramen won the Mentor's Choice Award
+          sponsored by Microsoft.
+          <br />
+          <a class="pull-right" href="https://devpost.com/software/bob-s-ramen">
+            Check it out
+          </a>
+        </p>
       </div>
 
-      <p id="project-picker-hint">~See all my projects~</p>
+      <!-- ResistAR -->
+      <div class="project-item" id="resistar">
+        <div class="clearfix">
+          <img class="project-image" alt="ResistAR" src="img/projects/resistar.jpg" />
+          <p class="pull-right">February 2017</p>
+        </div>
+        <p class="project-description section-text clearfix">
+          When you're at a hackathon with 3 other ECE (electrical and computer engineering)
+          majors you shouldn't be surprised if your project is about resistors. Our idea was
+          to design 3D printed parts representing circuit components (source, ground, resistor),
+          and then make an app that would visualize the circuit flow through a given circuit
+          configuration. None of us had experience with augmented reality, but we decided to
+          go for the challenge. The project would also have educational applications. We
+          happened upon the Vuforia SDK which could be coupled with Unity to make augmented
+          reality apps using QR codes as targets. I primarily worked on the algorithms which
+          outputted the electron flow direction and locations as well as the solved resistor
+          potential differences and electric current. We made ResistAR at TartanHacks, Carnegie
+          Mellon's premiere hackathon and won the grand prize.
+          <br />
+          <a class="pull-right" href="https://devpost.com/software/resistar">
+            Check it out
+          </a>
+        </p>
+      </div>
 
-      <!-- Project Picker -->
-      <select class="projects-picker">
-        <option data-img-src="img/project_thumbnails/ramen.jpg" data-img-class="projects-pick" data-img-alt="Bob's Ramen" value="ramen">
-          Bob's Ramen
-        </option>
-        <option data-img-src="img/project_thumbnails/resistar.jpg" data-img-class="projects-pick" data-img-alt="ResistAR" value="resistar">
-          ResistAR
-        </option>
-        <option data-img-src="img/project_thumbnails/inventex.jpg" data-img-class="projects-pick" data-img-alt="Inventex" value="inventex">
-          Inventex
-        </option>
-        <option data-img-src="img/project_thumbnails/discourse.jpg" data-img-class="projects-pick" data-img-alt="Facebook Discourse" value="discourse">
-          Facebook Discourse
-        </option>
-        <option data-img-src="img/project_thumbnails/modware.jpg" data-img-class="projects-pick" data-img-alt="Modware" value="modware">
-          Modware
-        </option>
-        <option data-img-src="img/project_thumbnails/simon.jpg" data-img-class="projects-pick" data-img-alt="Simon" value="simon">
-          Simon
-        </option>
-      </select>
+      <!-- Inventex -->
+      <div class="project-item" id="inventex">
+        <div class="clearfix">
+          <img class="project-image" alt="Inventex" src="img/projects/inventex.jpg" />
+          <p class="pull-right">September 2017</p>
+        </div>
+        <p class="project-description section-text clearfix">
+          Inventex is an internet-enabled hardware sorter and inventory maintenance machine.
+          It works with a mobile app built in React Native. I was in charge of making the
+          mobile app and configuring the raspberry pi to take incoming commands. The problem
+          it was aimed towards was messy workspaces. With Inventex, you can scan the piece of
+          hardware that you want to desposit with the app, then put it in the machine's input
+          slot. The machine then allocates a bin for that category of hardware and deposits
+          the hardware in it. When you want to retrieve something, you can select the
+          hardware type and amount from the app interface and the machine will spit it out for
+          you. We made Inventex at PennApps, and we won the best hardware hack award.
+          <br />
+          <a class="pull-right" href="https://devpost.com/software/toolhub">
+            Check it out
+          </a>
+        </p>
+      </div>
 
+      <!-- Facebook Discourse -->
+      <div class="project-item" id="discourse">
+        <div class="clearfix">
+          <img class="project-image" alt="Facebook Discourse" src="img/projects/discourse.jpg" />
+          <p class="pull-right">November 2017</p>
+        </div>
+        <p class="project-description section-text clearfix">
+          At the Facebook Global Hackathon, my team and I created something called Facebook
+          Discourse. A bit of background about the Facebook Global Hackathon: every year
+          Facebook invites the winners of a handful of hackathons from across the globe.
+          When I participated, there were 20 teams from 11 different countries. I qualified
+          because my team won the grand prize at TartanHacks. Some other hackathons from the
+          US that are represented are PennApps, HackMIT, and TreeHacks (Stanford). Facebook
+          Discourse is a debate platform that fosters positive discourse by only allowing
+          positive interactions from spectators like up-voting debate points and also adding
+          credible sources. Additionally, users can follow debate threads that are
+          automatically detected by the system. This could be used with presidential debates
+          by visualizing the arguments on our platform. We presented Facebook Discourse to
+          the VPs of technology of OculusVR, WhatsApp, and Instagram and won first prize.
+        </p>
+      </div>
+
+      <!-- Modware -->
+      <div class="project-item" id="modware">
+        <div class="clearfix">
+          <img class="project-image" alt="Modware" src="img/projects/modware.jpg" />
+          <p class="pull-right">January 2018</p>
+        </div>
+        <p class="project-description section-text clearfix">
+          At PennApps, my team and I made Modware, a modular hardware prototyping kit for the
+          software engineer to take the "hard" out of hardware. Modware is a magnetic board
+          with magnetically attachable hardware components such as light switches, knobs, and
+          lights. The idea is that with Modware, the user would be able to easily hook up
+          hardware components to anything they might need without having to know the details
+          of electrical engineering. Modware also includes a UI to connect
+          the components to each other and configure APIs with the hardware components.
+          One of the examples we set up was using a knob to control the depth of a Sierpinski's
+          triangle rendering. A software engineer could also make a light flash to alert
+          them of something like a stock hitting a certain price. I personally worked on the
+          backend design including data structures and data passing and also the examples of
+          how Modware can be used by a software engineer. Modware earned us four awards: the
+          PennApps 2nd place prize, Lutron's IOT award, Best Hardware Hack, and Hacker's
+          favorite award.
+          <br />
+          <a class="pull-right" href="https://devpost.com/software/modware">
+            Check it out
+          </a>
+        </p>
+      </div>
+
+      <!-- Personal Website -->
+      <div class="project-item" id="personal-website">
+        <div class="clearfix">
+          <img class="project-image" alt="Personal Website" src="img/projects/personal_website.png" />
+          <p class="pull-right">August 2018</p>
+        </div>
+        <p class="project-description section-text clearfix">
+          I created this website with raw html, css, and javascript. I had only
+          a loose understanding of how css works from my experience with react
+          and react native, so I decided to get more experience by making this
+          website. The only third party code that I used was for the projects
+          picker widget below and also for the tool to register keyboard input
+          for the easter egg game you can play if you click on the fox at the
+          very bottom of this page.
+          <br />
+          <a class="pull-right" href="https://jeremyong.me">
+            Check it out
+          </a>
+        </p>
+      </div>
+
+      <!-- Simon -->
+      <div class="project-item" id="simon">
+        <div class="clearfix">
+          <img class="project-image" alt="Modware" src="img/projects/simon.jpg" />
+          <p class="pull-right">September 2018</p>
+        </div>
+        <p class="project-description section-text clearfix">
+          The Simon System consists of Simon, our robot that learns to perform the human's input
+          actions. There are two "play" fields, one for the human to perform actions and the other
+          for Simon to reproduce actions. Everything starts with a human action. The Simon System
+          detects human motion and records what happens. Then those actions are interpreted into
+          actions that Simon can take. Then Simon performs those actions in the second play field,
+          making sure to plan efficient paths taking into consideration that it is a robot in the
+          field. I implemented the computer vision, path planning, robot feedback control, and
+          communication between components of the project. The computer vision systems intelligently
+          detects when updates are made to the human control field and acquires normalized grid
+          size of the play field using QR boundaries. The robot's orientation is also corrected
+          using information from the computer vision. The path planning system uses a modified
+          BFS algorithm taking into account path smoothing with realtime updates from the
+          low-level controls to calibrate path plan throughout execution. Communication
+          throughout the project uses bluetooth and unix sockets.
+          <br />
+          <a class="pull-right" href="https://devpost.com/software/the-simon-system">
+            Check it out
+          </a>
+        </p>
+      </div>
     </div>
 
-    <!-- Experience -->
-    <div class="section" id="experience">
-      <h1 class="section-header">EXPERIENCE</h1>
-      <div id="experience-timeline">
-        <ul>
+    <p id="project-picker-hint">~See all my projects~</p>
 
-          <!-- 10-601 TA -->
-          <li>
-            <h3 class="experience-name">
-              TA for <a class="cmu-font underline-link" href="http://www.cs.cmu.edu/~mgormley/courses/10601-s18/index.html">10-601 Intro to ML </a>
-            </h3>
-            <p class="experience-description">
-              This is Carnegie Mellon's introductory machine learning course targeted at
-              Master's students. It covers all or most of: concept learning, decision trees,
-              neural networks, linear learning, active learning, estimation & the bias-variance
-              tradeoff, hypothesis testing, Bayesian learning, the MDL principle,
-              the Gibbs classifier, Naive Bayes, Bayes Nets & Graphical Models, the EM algorithm,
-              Hidden Markov Models, K-Nearest-Neighbors and nonparametric learning, reinforcement
-              learning, bagging, boosting and discriminative training. My responsibilities will
-              include leading recitations and designing assignments and tests.
+    <!-- Project Picker -->
+    <select class="projects-picker">
+      <option data-img-src="img/project_thumbnails/ramen.jpg" data-img-class="projects-pick" data-img-alt="Bob's Ramen"
+        value="ramen">
+        Bob's Ramen
+      </option>
+      <option data-img-src="img/project_thumbnails/resistar.jpg" data-img-class="projects-pick" data-img-alt="ResistAR"
+        value="resistar">
+        ResistAR
+      </option>
+      <option data-img-src="img/project_thumbnails/inventex.jpg" data-img-class="projects-pick" data-img-alt="Inventex"
+        value="inventex">
+        Inventex
+      </option>
+      <option data-img-src="img/project_thumbnails/discourse.jpg" data-img-class="projects-pick"
+        data-img-alt="Facebook Discourse" value="discourse">
+        Facebook Discourse
+      </option>
+      <option data-img-src="img/project_thumbnails/modware.jpg" data-img-class="projects-pick" data-img-alt="Modware"
+        value="modware">
+        Modware
+      </option>
+      <option data-img-src="img/project_thumbnails/personal_website.png" data-img-class="projects-pick"
+        data-img-alt="Personal Website" value="personal-website">
+        Modware
+      </option>
+      <option data-img-src="img/project_thumbnails/simon.jpg" data-img-class="projects-pick" data-img-alt="Simon"
+        value="simon">
+        Simon
+      </option>
+    </select>
+
+  </div>
+
+  <!-- Experience -->
+  <div class="section" id="experience">
+    <h1 class="section-header">EXPERIENCE</h1>
+    <div id="experience-timeline">
+      <ul>
+        <!-- 10-601 TA -->
+        <li>
+          <h3 class="experience-name">
+            Perception Platform Intern at <a href="https://getcruise.com">
+              <svg id="cruise" viewBox="0 0 97 20">
+                <title>Cruise</title>
+                <path fill="currentColor"
+                  d="M58.17 1.43v17.21a1 1 0 0 1-1.07 1.05h-.78a1.08 1.08 0 0 1-1.08-1.05V1.43a1.06 1.06 0 0 1 1.08-1h.78a1 1 0 0 1 1.07 1zM71.63 8.8c-.82-.21-1.58-.34-2.39-.49a22.59 22.59 0 0 1-3.53-.82 2 2 0 0 1-1.57-2.39A3.83 3.83 0 0 1 66.68 3a6.11 6.11 0 0 1 5.95 1.58 1.12 1.12 0 0 0 1.37.21 2.59 2.59 0 0 0 .63-.4 1.12 1.12 0 0 0 .3-1.45s-.09-.15-.19-.27a.87.87 0 0 0-.13-.15 8.92 8.92 0 0 0-12-.15A4.46 4.46 0 0 0 61.29 7a4.21 4.21 0 0 0 2.89 3 20.22 20.22 0 0 0 3.19.84h.09l1.4.25a12 12 0 0 1 2.87.68 2.73 2.73 0 0 1 1.53 1.59 2.33 2.33 0 0 1-.65 2 5.78 5.78 0 0 1-5.53 1.51 10 10 0 0 1-3.48-2.17 1.15 1.15 0 0 0-1.47-.33 2.93 2.93 0 0 0-.63.4 1.15 1.15 0 0 0-.31 1.46l.23.34a9.25 9.25 0 0 0 1.88 1.76A8.83 8.83 0 0 0 68.48 20a8.75 8.75 0 0 0 5.2-1.68 5.56 5.56 0 0 0 2.45-5.66c-.44-1.89-2-3.19-4.52-3.86zm-53 6.33l.05-.08a2 2 0 0 0 .35-.88 1.35 1.35 0 0 0-.5-1 2.23 2.23 0 0 0-1.57-.55.84.84 0 0 0-.57.36c-.1.15-.17.28-.25.42s-.13.25-.21.36a6.94 6.94 0 0 1-12.36-1.25A6.95 6.95 0 0 1 16 6.47l.1.16a2.81 2.81 0 0 0 .46.65.73.73 0 0 0 .55.19 2.41 2.41 0 0 0 1.51-.73c.6-.67.25-1.35-.15-2A9.81 9.81 0 0 0 17 2.86a10 10 0 1 0 1.61 12.27zm11.75-11.9c.79 0 1-.44 1.13-1.11a3.48 3.48 0 0 0 0-.79 1.15 1.15 0 0 0-1.13-1.1 9.74 9.74 0 0 0-9.52 9.91V18a1.9 1.9 0 0 0 .19 1.19c.35.49.86.49 1.42.47a1.46 1.46 0 0 0 1-.38.93.93 0 0 0 .27-.72V10a6.8 6.8 0 0 1 6.61-6.8zm21-2.87h-.76a1.07 1.07 0 0 0-1.07 1.07v8.77a6.62 6.62 0 1 1-13.24 0V1.41A1.06 1.06 0 0 0 35.2.34h-.78a1.07 1.07 0 0 0-1.07 1v8.73A9.76 9.76 0 0 0 42.87 20a9.75 9.75 0 0 0 9.53-9.86V1.41a1 1 0 0 0-1.06-1zm44.25 15.86a10.19 10.19 0 0 0 .63-.88l.1-.15a2.13 2.13 0 0 0 .44-1.07 1.35 1.35 0 0 0-.5-1 2.53 2.53 0 0 0-1.3-.55c-.52 0-.77.42-1.06.86l-.09.15A7.45 7.45 0 0 1 91.31 16a6.92 6.92 0 0 1-9.45-2.52 6.8 6.8 0 0 1-.86-2.69 7 7 0 0 1 3.24-6.68 7 7 0 0 1 8.51 1v.08l-5.42 3.5c-.7.46-1.68.94-1.12 1.93.24.42.61 1 1.12 1.13a1.09 1.09 0 0 0 .88-.16c.31-.19 7.71-5 7.71-5a1.28 1.28 0 0 0 .54-.59c.28-.57 0-1.07-.37-1.54A10 10 0 0 0 87.81.07h-.21a9.93 9.93 0 0 0-9.73 10.17 9.76 9.76 0 0 0 .46 2.76 10 10 0 0 0 17.3 3.19z">
+                </path>
+              </svg></a>
+          </h3>
+          <div class="experience-description">
+            <p>
+              At Cruise Automation, I am investigating and adapting deep learning compiler technologies
+              for machine learning inference on the vehicle. This involves getting familiar
+              with Cruise's perception models, learning the details of the technology
+              I am dealing with, making use of profiling tools to gain more insight
+              into inference performance, and adding features for Cruise's needs.
             </p>
-            <span class="experience-times">
-              <span>Aug.<br>2018</span>
-              <span>Dec.<br>2018</span>
-            </span>
-          </li>
+            <p>
+              I am also
+              working on the Cruise deep learning inference framework to unify and streamline
+              the deployment of models onto the autonomous vehicle.
+            </p>
+          </div>
+          <span class="experience-times">
+            <span>May.<br>2019</span>
+            <span>Aug.<br>2019</span>
+          </span>
+        </li>
 
-          <!-- Aurora Internship -->
-          <li>
-            <h3 class="experience-name">
-              Intern at <a class="aurora-font underline-link" href="https://aurora.tech">AURORA</a>
-            </h3>
-            <div class="experience-description">
-              <p>
+        <!-- 10-601 TA -->
+        <li>
+          <h3 class="experience-name">
+            TA for <a class="cmu-font underline-link"
+              href="http://www.cs.cmu.edu/~mgormley/courses/10601-s18/index.html">10-601 Intro to ML </a>
+          </h3>
+          <p class="experience-description">
+            This is Carnegie Mellon's introductory machine learning course targeted at
+            Master's students. It covers all or most of: concept learning, decision trees,
+            neural networks, linear learning, active learning, estimation & the bias-variance
+            tradeoff, hypothesis testing, Bayesian learning, the MDL principle,
+            the Gibbs classifier, Naive Bayes, Bayes Nets & Graphical Models, the EM algorithm,
+            Hidden Markov Models, K-Nearest-Neighbors and nonparametric learning, reinforcement
+            learning, bagging, boosting and discriminative training. My responsibilities included
+            include leading recitations and designing assignments and tests.
+          </p>
+          <span class="experience-times">
+            <span>Aug.<br>2018</span>
+            <span>Dec.<br>2018</span>
+          </span>
+        </li>
+
+        <!-- Aurora Internship -->
+        <li>
+          <h3 class="experience-name">
+            Software Engineering Intern at <a class="aurora-font underline-link" href="https://aurora.tech">AURORA</a>
+          </h3>
+          <div class="experience-description">
+            <p>
               Over the summer I had the incredible opportunity to intern at this world-class self
               driving car company. While there, I built the core communication system between the
               self driving cars and the fleet monitoring dashboard. I worked with Qt, nginx,
               Flask, React, and Redux. My software was promptly adopted into the Vehicle
               Operations team's daily workflow. (The Vehicle Operations team is in charge of
               carrying out tests on the vehicles).
-              </p>
-              <p>
+            </p>
+            <p>
               During my internship, I also added hyperparameter tuning capabilities to the
               perception training script and created a tool to plot in Google Earth the global
               poses of perception training data along with their properties. For these projects
               I used Tensorflow, Python, and C++.
-              </p>
-            </div>
-            <span class="experience-times">
-              <span>Jun.<br>2018</span>
-              <span>Aug.<br>2018</span>
-            </span>
-          </li>
-
-          <!-- 15-110 TA -->
-          <li id="ta15110">
-            <h3 class="experience-name">
-              TA for <a class="cmu-font underline-link" href="https://www.cs.cmu.edu/~15110/">15-110 Principles of Computing </a>
-            </h3>
-            <p class="experience-description">
-              This is a course about fundamental computing principles for students with minimal
-              or no computing background. It teaches programming constructs and also covers
-              history and applications of computing. My responsibilities included leading
-              recitation, conducting office hours, grading assignments/tests, and discussing
-              how to improve the course. I spent around 8-10 hours a week on this.
             </p>
-            <span class="experience-times">
-              <span>Aug.<br>2017</span>
-              <span>Dec.<br>2017</span>
-            </span>
-          </li>
+          </div>
+          <span class="experience-times">
+            <span>Jun.<br>2018</span>
+            <span>Aug.<br>2018</span>
+          </span>
+        </li>
 
-          <!-- GenAMap Research Assistant -->
-          <li>
-            <h3 class="experience-name">
-              Research Assistant for <a class="genamap-font underline-link" href=http://genamap.org>GenAMap</a>
-            </h3>
-            <p class="experience-description">
+        <!-- 15-110 TA -->
+        <li id="ta15110">
+          <h3 class="experience-name">
+            TA for <a class="cmu-font underline-link" href="https://www.cs.cmu.edu/~15110/">15-110 Principles of
+              Computing </a>
+          </h3>
+          <p class="experience-description">
+            This is a course about fundamental computing principles for students with minimal
+            or no computing background. It teaches programming constructs and also covers
+            history and applications of computing. My responsibilities included leading
+            recitation, conducting office hours, grading assignments/tests, and discussing
+            how to improve the course. I spent around 8-10 hours a week on this.
+          </p>
+          <span class="experience-times">
+            <span>Aug.<br>2017</span>
+            <span>Dec.<br>2017</span>
+          </span>
+        </li>
+
+        <!-- GenAMap Research Assistant -->
+        <li>
+          <h3 class="experience-name">
+            Research Assistant for <a class="genamap-font underline-link" href=http://genamap.org>GenAMap </a> </h3> <p
+              class="experience-description">
               I worked on this research project at the Carnegie Mellon Center for Machine
-              Learning and Health. <a class="underline-link" href=http://genamap.org>GenAMap</a>
-              is a visual machine learning platform for genome-wide association studies. I
-              primarily designed and implemented systems for transferring data between the
-              backend and frontend. I used MongoDB, Node.js, Node.js C++ Addons, React, and Redux.
-            </p>
-            <span class="experience-times">
-              <span>Jun.<br>2017</span>
-              <span>Aug.<br>2017</span>
-            </span>
-          </li>
+              Learning and Health. <a class="underline-link" href=http://genamap.org>GenAMap </a> is a visual machine
+                learning platform for genome-wide association studies. I primarily designed and implemented systems for
+                transferring data between the backend and frontend. I used MongoDB, Node.js, Node.js C++ Addons, React,
+                and Redux. </p> <span class="experience-times">
+                <span>Jun.<br>2017</span>
+                <span>Aug.<br>2017</span>
+                </span>
+        </li>
 
-          <!-- 15-110 Principles of Computing -->
-          <li>
-            <h3 class="experience-name">
-              TA for <a class="cmu-font underline-link" href="https://www.cs.cmu.edu/~15110/">15-110 Principles of Computing </a>
-            </h3>
-            <p class="experience-description">
-              See description <a class="underline-link" href="#ta15110">above</a>.
-            </p>
-            <span class="experience-times">
-              <span>Jan.<br>2017</span>
-              <span>May.<br>2017</span>
-            </span>
-          </li>
+        <!-- 15-110 Principles of Computing -->
+        <li>
+          <h3 class="experience-name">
+            TA for <a class="cmu-font underline-link" href="https://www.cs.cmu.edu/~15110/">15-110 Principles of
+              Computing </a>
+          </h3>
+          <p class="experience-description">
+            See description <a class="underline-link" href="#ta15110">above</a>.
+          </p>
+          <span class="experience-times">
+            <span>Jan.<br>2017</span>
+            <span>May.<br>2017</span>
+          </span>
+        </li>
 
-        </ul>
-      </div>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="footer clearfix" id="contact">
+    <!-- Fox Hunt Start -->
+    <a id="fox-start" class="pull-left no-underline-link">
+      &#129418;
+    </a>
+    <div id="fox-start-speak" class="pull-left">
+      Hi! I'm KC! Let's play fox hunt. I hide, you find me!
     </div>
 
-    <!-- Contact -->
-    <div class="footer clearfix" id="contact">
-      <!-- Fox Hunt Start -->
-      <a id="fox-start" class="pull-left no-underline-link">
-        &#129418;
-      </a>
-      <div id="fox-start-speak" class="pull-left">
-        Hi! I'm KC! Let's play fox hunt. I hide, you find me!
-      </div>
+    <!-- Fox Hunt Hard Hint -->
+    <div id="fox-hard-hint" class="pull-left">Hint: My name is KC</div>
 
-      <!-- Fox Hunt Hard Hint -->
-      <div id="fox-hard-hint" class="pull-left">Hint: My name is KC</div>
+    <a href="https://github.com/jearmoo">
+      <img class="contact-item-image hover-fade" alt="Github" src="img/github.png" height=25 width=25 />
+    </a>
+    <a href="https://linkedin.com/in/jearmoo">
+      <img class="contact-item-image hover-fade" alt="LinkedIn" src="img/linkedin.png" height=25 width=25 />
+    </a>
+    <a href="https://facebook.com/tjong1998">
+      <img class="contact-item-image hover-fade" alt="Facebook" src="img/facebook.png" height=25 width=25 />
+    </a>
+    <a href="tel:360-890-7776">
+      <div class="contact-item underline-link">(360) 890-7776</div>
+    </a>
+    <a href="mailto:tto@andrew.cmu.edu">
+      <div class="contact-item underline-link">tto@andrew.cmu.edu</div>
+    </a>
+  </div>
 
-      <a href="https://github.com/jearmoo">
-        <img class="contact-item-image hover-fade" alt="Github" src="img/github.png" height=25 width=25/>
-      </a>
-      <a href="https://linkedin.com/in/jearmoo">
-        <img class="contact-item-image hover-fade" alt="LinkedIn" src="img/linkedin.png" height=25 width=25/>
-      </a>
-      <a href="https://facebook.com/tjong1998">
-        <img class="contact-item-image hover-fade" alt="Facebook" src="img/facebook.png" height=25 width=25/>
-      </a>
-      <a href="tel:360-890-7776">
-        <div class="contact-item underline-link">(360) 890-7776</div>
-      </a>
-      <a href="mailto:tto@andrew.cmu.edu">
-        <div class="contact-item underline-link">tto@andrew.cmu.edu</div>
-      </a>
-    </div>
+  <div id="last-updated">
+    <p>
+      last updated July 19, 2019.
+    </p>
+  </div>
 
-    <div id="last-updated">
-      <p>
-        last updated September 24, 2018.
-      </p>
-    </div>
+</body>
 
-  </body>
 </html>

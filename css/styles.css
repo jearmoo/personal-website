@@ -32,7 +32,6 @@ body {
     border-width: 2px 1px;
     border-style: solid;
     border-color: white lightgray black;
-
     text-align: center;
     background: white;
     position: absolute;
@@ -51,18 +50,18 @@ body {
     border-color: black;
 }
 
-#navbar > a, #compact-navbar > a {
+#navbar>a, #compact-navbar>a {
     text-align: center;
     color: black;
 }
 
-#compact-navbar > a {
+#compact-navbar>a {
     padding: 20px 0;
     display: block;
     font-size: 1em
 }
 
-#navbar > a {
+#navbar>a {
     font-size: 1.125em;
     padding: 14px 16px;
     margin-top: 1em;
@@ -74,10 +73,9 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-    #navbar > a:not(#navbar-name):not(#navbar-menu-icon) {
+    #navbar>a:not(#navbar-name):not(#navbar-menu-icon) {
         display: none;
     }
-
     #navbar #navbar-menu-icon {
         display: block;
     }
@@ -107,6 +105,10 @@ body {
     height: auto;
     margin-right: 50px;
     max-width: 800px;
+}
+
+#me-text {
+    top: 50%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -162,7 +164,6 @@ body {
     #projects ul.thumbnails.image_picker_selector {
         width: 175px;
     }
-
     #projects .projects-pick {
         width: 45px;
         height: auto;
@@ -177,12 +178,13 @@ body {
     position: relative;
 }
 
-#experience-timeline > ul {
+#experience-timeline>ul {
     list-style: none;
 }
 
 /* the long dotted line */
-#experience-timeline > ul:before {
+
+#experience-timeline>ul:before {
     content: '';
     height: 100%;
     position: absolute;
@@ -198,18 +200,18 @@ body {
     text-align: left;
 }
 
-#experience-timeline > ul > li {
+#experience-timeline>ul>li {
     margin-left: 30px;
     padding: 8px;
     border: 2px solid black;
     position: relative;
 }
 
-#experience-timeline > ul > li {
+#experience-timeline>ul>li {
     margin-top: 40px;
 }
 
-#experience-timeline > ul li span.experience-times {
+#experience-timeline>ul li span.experience-times {
     width: 2px;
     height: 100%;
     background: black;
@@ -219,8 +221,9 @@ body {
 }
 
 /* the timeline circles */
+
 #experience-timeline ul li span.experience-times:before, #experience-timeline ul li span.experience-times:after {
-    position:absolute;
+    position: absolute;
     content: '';
     width: 8px;
     height: 8px;
@@ -239,6 +242,7 @@ body {
 }
 
 /* the experience-times and the solid lines connecting them */
+
 #experience-timeline span.experience-times span {
     position: absolute;
     left: -110px;
@@ -256,20 +260,16 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
-
-    #experience-timeline > ul > li {
+    #experience-timeline>ul>li {
         margin-left: 15px;
     }
-
     #experience-timeline ul li span.experience-times {
         left: -17px;
     }
-
     #experience-timeline span.experience-times span {
         font-size: .7em;
     }
 }
-
 
 /* CONTACT */
 
@@ -297,7 +297,7 @@ body {
 
 .footer {
     margin: 5% 5% 2.5% 5%;
-    border-top:  2px solid lightgray;
+    border-top: 2px solid lightgray;
     padding-top: 20px;
     padding-right: 10px;
     padding-left: 10px;
@@ -337,12 +337,23 @@ body {
 }
 
 .cmu-font {
-    color: black;
+    color: #CC0000;
     font-weight: bold;
 }
 
+/* .cruise-font {
+    color: #f3583F;
+    font-weight: bold;
+} */
+
+#cruise {
+    color: #f3583F;
+    width: 72px;
+}
+
 .genamap-font {
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,cursive;;
+    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, cursive;
+    ;
     color: #00B8E6;
     font-weight: bold;
 }
@@ -494,11 +505,9 @@ body {
     #fox-start {
         display: none !important;
     }
-
     #fox-next {
         display: none !important;
     }
-
     #fox-next-next {
         display: none !important;
     }
@@ -510,7 +519,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(206,103,0,.5);
+    background-color: rgba(206, 103, 0, .5);
     padding: 20%px;
     text-align: center;
     align-items: center;
@@ -537,13 +546,21 @@ body {
 /* FADE */
 
 @keyframes fade-in {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fade {
-    from {opacity: 1;}
-    to {opacity: .3;}
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: .3;
+    }
 }
 
 @media only screen and (min-width: 800px) {
