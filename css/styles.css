@@ -101,10 +101,13 @@ body {
 /* ME */
 
 #aboutme #me-img {
-    width: 45%;
+    width: 40%;
     height: auto;
     margin-right: 50px;
+    margin-top: -20px;
     max-width: 800px;
+    border-radius: 20%;
+    border: 2px solid lightgray;
 }
 
 #me-text {
