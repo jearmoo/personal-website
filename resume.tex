@@ -1,0 +1,129 @@
+%% The MIT License (MIT)
+%%
+%% Copyright (c) 2015 Daniil Belyakov
+%%
+%% Permission is hereby granted, free of charge, to any person obtaining a copy
+%% of this software and associated documentation files (the "Software"), to deal
+%% in the Software without restriction, including without limitation the rights
+%% to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%% copies of the Software, and to permit persons to whom the Software is
+%% furnished to do so, subject to the following conditions:
+%%
+%% The above copyright notice and this permission notice shall be included in all
+%% copies or substantial portions of the Software.
+%%
+%% THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%% IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%% FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%% AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%% LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%% OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+%% SOFTWARE.
+
+% The font could be set to Windows-specific Calibri by using the 'calibri' option
+\documentclass[termes]{resume}
+
+% For mathematical symbols
+\usepackage{amsmath}
+
+% For hyperlinks
+\usepackage{hyperref}
+
+% Set applicant's personal data for header
+\name{Jeremy Ong}
+\website{\href{https://jeremyong.me}{jeremyong.me}}
+\contacts{\href{tel: (360) 890-7776}{(360) 890-7776}\linebreak \href{mailto: tto@alumni.cmu.edu}{tto@alumni.cmu.edu}}
+
+\begin{document}
+
+	% Print the header
+	\makeheader
+	
+	% Print the content	
+	\begin{cvsection}{Education}
+		\begin{cvsubsection}{Pittsburgh, PA}{Carnegie Mellon University}{August 2016 -- May 2020}
+			\begin{itemize}
+				\item B.S. in Computer Science, Minor in Machine Learning, Cumulative GPA: 3.81/4.00
+				\item Coursework: Computer Systems, Parallel Computer Architecture and Programming, Programming Language Theory, Complexity Theory, Machine Learning, Computer Security, Graph Theory, Operating Systems
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+		
+	\begin{cvsection}{Languages and Technologies}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}
+				\item C++, Python, CUDA, Bash, Javascript, SQL
+				\item Pytorch, Tensorflow, Google Cloud, ROS, eBPF, Flask, Node.js, MongoDB, React, Qt
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Employment}
+		\begin{cvsubsection}{Senior Software Engineer}{Cruise}{July 2022 -- March 2023}		
+			\begin{itemize}
+				\item Owned the Cruise ML runtime which executes all 50+ ML models in the autonomous vehicle stack. Oversaw cross functional feature prioritization, technical support, and knowledge sharing.
+				\item Lead three engineers to deliver a solution to centralize metadata/metrics of deployed ML models at Cruise. Project was conceived at an internal hackathon where it won two awards: People's Choice and Best Demo.
+				\item Coordinated weekly team deep dive sessions.
+				\item Mentored an intern to enable specification of max size of dynamic dimensions in the Cruise ML runtime.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Software Engineer}{Cruise}{June 2020 -- July 2022}		
+			\begin{itemize}
+				\item Wrote performant C++/CUDA programs which implement perception algorithms including mean shift clustering and voxelization to unblock ML model deployment.
+%				\item Decoupled Pytorch from the Cruise ML runtime to increase on road software stability.
+				\item Optimized memory usage in the Cruise ML runtime saving over 1 GB in GPU memory plus more in future model deployments by adding static buffer sharing capabilities. Savings in both simulation and deployment.
+%				\item Collected memory usage information with eBPF to inform memory sizing of custom AI chips.
+%				\item Extended Cruise ML Runtime with a generic visitor pattern extension. Used to extract training data when running the AV stack and for functional parity tests.
+%				\item Fought fires
+%				\item Involved in librarifying CUDA kernels
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Software Engineer, Intern}{Cruise}{May 2019 -- August 2019}	
+			\begin{itemize}
+				\item Investigated and adapted deep learning compiler technologies for ML inference.
+				\item Designed and implemented shape propagation in the Cruise ML runtime.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Software Engineer, Intern}{Aurora}{June 2018 -- August 2018}	
+			\begin{itemize}
+%				\item Built the core messaging platform between autonomous vehicle operators and the fleet monitoring dashboard to enable more effective fleet management.
+				\item Enabled more effective fleet management by developing the core messaging platform.
+				\item Configured automatic hyperparameter tuning for training of perception models.
+%				\item Created tooling to visualize the global poses of training data.
+			\end{itemize}
+		\end{cvsubsection}
+		
+		\begin{cvsubsection}{Research Assistant}{CMU Center for ML and Health}{June 2017 -- August 2017}
+			\begin{itemize}
+				\item Developed on GenAMap, a visual machine learning platform for genome studies.
+				\item Architected aggregation pipeline for data transfer between backend and frontend.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Projects}
+		\begin{cvsubsection}{}{}{}
+			\begin{itemize}
+%				\item \textbf{Modware} \textit{PennApps} (January 2018) A modular internet of things hardware prototyping kit for the software engineer. \textit{Winner}: 2nd place overall, Lutron's IOT award, best hardware hack, hacker's favorite.
+				%\item \textbf{Facebook Discourse} \textit{Facebook Global Hackathon} (November 2017) A debate platform that fosters productive discourse. Presented to the VPs of Technology of Oculus VR, Instagram, and WhatsApp. \textit{Winner}: First place out of 20 finalist teams from 11 different countries.
+				\item \textbf{Facebook Discourse} \textit{Facebook Global Hackathon} (November 2017) A debate platform that fosters productive discourse. \textit{Winner}: First place out of 20 finalist teams from 11 different countries.
+				\item \textbf{ResistAR} \textit{TartanHacks} (February 2017) An educational augmented reality circuit solver app using Unity. Designed algorithms which process 3D coordinates of physical components to solve for current, voltage, and power and create an electron flow visualization overlay. \textit{Winner}: Carnegie Mellon Grand Prize.
+				%\item \textbf{BOBS Ramen} \textit{HackCMU} (September 2016) Built an internet of things ramen preparer on a team of 4 freshmen. Programmed the microcontroller to direct servomotors and take network requests. \textit{Winner}: Microsoft Mentor's Choice Award.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+	\begin{cvsection}{Teaching Experience}
+		\begin{cvsubsection}{}{}{}	
+			\begin{itemize}
+				\item \textbf{Teaching Assistant for Complexity Theory} (January-May 2020) Instructed students in complexity theory concepts.
+				\item \textbf{Teaching Assistant for Intro to ML (Master's)} (August-December 2018) Drafted assignments and tests, coordinated course logistics, and taught recitations.
+			\end{itemize}
+		\end{cvsubsection}
+	\end{cvsection}
+	
+\end{document}
+
